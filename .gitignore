@@ -1,0 +1,13 @@
+_opam
+_build
+*.install
+.merlin
+*.corrected
+
+# vim swap files
+*.swp
+*.swo
+
+# emacs lock and backup files
+*~
+.#*
