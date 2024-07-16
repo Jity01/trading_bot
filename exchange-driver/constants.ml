@@ -12,13 +12,13 @@ end
 module These_values_should_not_be_changed = struct
   open Please_update_team_name_here
 
-  let test_exchange_host  = "test-exch-" ^ String.lowercase team_name
+  let test_exchange_host = "test-exch-" ^ String.lowercase team_name
   let test_prod_like_port = 22000
-  let production_host     = "production"
-  let production_port     = 25000
+  let production_host = "production"
+  let production_port = 25000
 
   (* Redefine team_name to be of the correct type. *)
-  let team_name           = Team_name.of_string_exn team_name
+  let team_name = Team_name.of_string_exn team_name
 end
 
 include These_values_should_not_be_changed

@@ -8,11 +8,7 @@ module Test_exchange_type = struct
     | Empty
   [@@deriving enumerate, sexp_of]
 
-  let port_offset = function
-    | Prod_like -> 0
-    | Slower    -> 1
-    | Empty     -> 2
-  ;;
+  let port_offset = function Prod_like -> 0 | Slower -> 1 | Empty -> 2
 end
 
 type t =
@@ -23,7 +19,8 @@ type t =
 let hostname_and_port = function
   | Testing test_exchange ->
     ( Constants.test_exchange_host
-    , Constants.test_prod_like_port + Test_exchange_type.port_offset test_exchange )
+    , Constants.test_prod_like_port
+      + Test_exchange_type.port_offset test_exchange )
   | Prod -> Constants.production_host, Constants.production_port
 ;;
 

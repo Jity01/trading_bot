@@ -7,7 +7,7 @@ open Import
 type t
 
 (** Initiate [t]. *)
-val create  : unit -> t
+val create : unit -> t
 
 (** Generate the next unused order ID. *)
-val next_id : t    -> Order_id.t
+val next_id : t -> Order_id.t

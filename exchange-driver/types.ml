@@ -7,7 +7,7 @@ module type Stringable = sig
   val of_string_exn : string -> t
 
   include Comparable.S_binable with type t := t
-  include Hashable.S           with type t := t
+  include Hashable.S with type t := t
 end
 
 module type Intable = sig
@@ -32,20 +32,17 @@ module Dir = struct
   include Hashable.Make (T)
 
   let of_string_exn = function
-    | "BUY"  -> Buy
+    | "BUY" -> Buy
     | "SELL" -> Sell
-    | s      -> raise_s [%message "Invalid direction" s]
+    | s -> raise_s [%message "Invalid direction" s]
   ;;
 
-  let to_string = function
-    | Buy  -> "BUY"
-    | Sell -> "SELL"
-  ;;
+  let to_string = function Buy -> "BUY" | Sell -> "SELL"
 end
 
 module Dirpair = struct
   type 'a t =
-    { buy  : 'a
+    { buy : 'a
     ; sell : 'a
     }
   [@@deriving sexp, compare, bin_io]
@@ -55,7 +52,7 @@ end
 
 module Uppercase_alpha_string (A : sig
     val max_length : int
-    val error      : string
+    val error : string
   end) =
 struct
   let is_upper_alpha = String.for_all ~f:Char.is_uppercase
@@ -67,16 +64,18 @@ struct
     let to_string s = s
 
     let of_string s =
-      if (not (is_upper_alpha s)) || String.is_empty s || String.length s > A.max_length
+      if (not (is_upper_alpha s))
+         || String.is_empty s
+         || String.length s > A.max_length
       then Or_error.error_string A.error
       else Ok s
     ;;
 
     let of_string_exn s = Or_error.ok_exn (of_string s)
-    let to_sexpable     = to_string
-    let of_sexpable     = of_string_exn
-    let to_binable      = to_string
-    let of_binable      = of_string_exn
+    let to_sexpable = to_string
+    let of_sexpable = of_string_exn
+    let to_binable = to_string
+    let of_binable = of_string_exn
 
     let caller_identity =
       Bin_prot.Shape.Uuid.of_string "0e37ee06-1510-11ea-8d71-362b9e155667"
@@ -95,19 +94,22 @@ struct
 end
 
 module Restricted_integer (A : sig
-    val test  : int -> bool
+    val test : int -> bool
     val error : string
   end) =
 struct
   module T1 = struct
     type t = int [@@deriving sexp_of, compare, hash]
 
-    let of_int t     = if not (A.test t) then Or_error.error_string A.error else Ok t
+    let of_int t =
+      if not (A.test t) then Or_error.error_string A.error else Ok t
+    ;;
+
     let of_int_exn t = Or_error.ok_exn (of_int t)
-    let to_int t     = t
-    let t_of_sexp s  = of_int_exn (Int.t_of_sexp s)
-    let to_binable   = to_int
-    let of_binable   = of_int_exn
+    let to_int t = t
+    let t_of_sexp s = of_int_exn (Int.t_of_sexp s)
+    let to_binable = to_int
+    let of_binable = of_int_exn
 
     let caller_identity =
       Bin_prot.Shape.Uuid.of_string "238184de-1510-11ea-8d71-362b9e155667"
@@ -131,8 +133,7 @@ struct
 
   let of_string s =
     let open Result.Monad_infix in
-    (try Ok (Int.of_string s) with
-     | _ -> Or_error.error_string A.error)
+    (try Ok (Int.of_string s) with _ -> Or_error.error_string A.error)
     >>= of_int
   ;;
 
@@ -142,20 +143,20 @@ end
 module Price = struct
   include Restricted_integer (struct
       let test t = t > 0
-      let error  = "bad price"
+      let error = "bad price"
     end)
 end
 
 module Size = struct
   include Restricted_integer (struct
       let test t = t > 0
-      let error  = "bad size"
+      let error = "bad size"
     end)
 end
 
 module Order_id = Restricted_integer (struct
     let test t = t >= 0
-    let error  = "bad order ID"
+    let error = "bad order ID"
   end)
 
 module Position = struct
@@ -163,27 +164,28 @@ module Position = struct
 
   include Restricted_integer (struct
       let test x = not (check_preempt_overflow x)
-      let error  = "position failed overflow check"
+      let error = "position failed overflow check"
     end)
 end
 
 module Symbol = struct
   include Uppercase_alpha_string (struct
       let max_length = 12
-      let error      = "bad symbol"
+      let error = "bad symbol"
     end)
-  let bond  = of_string_exn "BOND"
-  let vale  = of_string_exn "VALE"
+
+  let bond = of_string_exn "BOND"
+  let vale = of_string_exn "VALE"
   let valbz = of_string_exn "VALBZ"
-  let xlf   = of_string_exn "XLF"
-  let gs    = of_string_exn "GS"
-  let ms    = of_string_exn "MS"
-  let wfc   = of_string_exn "WFC"
+  let xlf = of_string_exn "XLF"
+  let gs = of_string_exn "GS"
+  let ms = of_string_exn "MS"
+  let wfc = of_string_exn "WFC"
 end
 
 module Team_name = struct
   include Uppercase_alpha_string (struct
       let max_length = 32
-      let error      = "team name not an uppercase alpha string"
+      let error = "team name not an uppercase alpha string"
     end)
 end

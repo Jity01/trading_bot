@@ -1,6 +1,6 @@
 open! Core
 open! Async
-open  Types
+open Types
 
 type t
 

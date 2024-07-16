@@ -9,7 +9,7 @@ module type Stringable = sig
   val of_string_exn : string -> t
 
   include Comparable.S_binable with type t := t
-  include Hashable.S           with type t := t
+  include Hashable.S with type t := t
 end
 
 (** The [Intable] module type provides all the same things as [Stringable],
@@ -26,20 +26,20 @@ end
 module Symbol : sig
   include Stringable
 
-  val bond  : t
-  val vale  : t
+  val bond : t
+  val vale : t
   val valbz : t
-  val xlf   : t
-  val gs    : t
-  val ms    : t
-  val wfc   : t
+  val xlf : t
+  val gs : t
+  val ms : t
+  val wfc : t
 end
 
 module Team_name : Stringable
-module Price     : Intable
-module Size      : Intable
-module Position  : Intable
-module Order_id  : Intable
+module Price : Intable
+module Size : Intable
+module Position : Intable
+module Order_id : Intable
 
 module Dir : sig
   type t =
@@ -55,7 +55,7 @@ end
     have values for both sides. *)
 module Dirpair : sig
   type 'a t =
-    { buy  : 'a
+    { buy : 'a
     ; sell : 'a
     }
   [@@deriving sexp, bin_io]
