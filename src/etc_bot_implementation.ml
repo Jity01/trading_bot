@@ -67,7 +67,7 @@ let run exchange_type =
                 ~size:(Size.of_int_exn 2)
                 |> don't_wait_for);
            | Hello my_positions -> ()
-           | Fill fill -> 
+           (* | Fill fill ->  *)
            | Reject _ -> printf !"%{sexp: Exchange_message.t}\n%!" message
            | Book book ->
             (match Symbol.to_string book.symbol with
