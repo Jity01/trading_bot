@@ -8,12 +8,91 @@ let run_every seconds ~f =
   Async.Clock.every (Time_float.Span.of_sec seconds) f
 ;;
 
-let is_good_to_buy fair_value bid = bid < fair_value
-let is_good_sell fair_value ask = ask > fair_value
+type tradable = BOND | VALBZ | VALE
 
-type current_positions = { mutable bids_and_asks : int }
+type tradable_record = {
+  mutable bond : int
+  (* ; mutable gs : int
+  ; mutable ms : int  *)
+  ; mutable valbz : int
+  ; mutable vale : int
+  (* ; mutable wfc : int
+  ; mutable xlf : int *)
+}
 
-let curr = { bids_and_asks = 0 }
+module State_manager = struct
+  type t = {
+    positions : tradable_record
+    ; fair_values : tradable_record
+    ; exchange_driver : Exchange_driver.t
+    ; order_id_generator : Order_id_generator.t
+  }
+
+  let is_vale_underpriced t = t.fair_values.vale < t.fair_values.valbz
+  let is_vale_overpriced t = t.fair_values.vale > t.fair_values.valbz
+
+  let has_hit_pos_limit t (tradeable : tradable) =
+    match tradeable with
+    | VALE -> t.positions.vale <= 100 && t.positions.vale >= -100
+    | VALBZ -> t.positions.valbz <= 100 && t.positions.valbz >= -100
+    | BOND -> t.positions.bond <= 100 && t.positions.bond >= -100
+  
+    let add_buy_order t (tradeable : tradable) (price : int) (size : int) =
+    (* if i cant buy more vale (maybe i can profit by conversion) -> convert ALL vale shares to valbz, sell valbz, and then buy more vale
+      (extra: you can calculate diff in holdings and see if it beats the $10 fee & see if we have to do this at all)
+      i can buy vale -> buy vale (in little orders) *)
+    match tradeable with
+    | VALE ->
+      (match has_hit_pos_limit t VALE with
+      | true -> ()
+      | false ->
+        Exchange_driver.add_order
+        t.exchange_driver
+        ~order_id:(Order_id_generator.next_id t.order_id_generator)
+        ~symbol:Symbol.vale
+        ~dir:Buy
+        ~price:(Price.of_int_exn price)
+        ~size:(Size.of_int_exn size)
+      |> don't_wait_for;)
+    | _ -> ()
+  let add_sell_order (tradable : tradable) = ()
+  let hedge_buy tradable = ()
+  let hedge_sell tradable = ()
+  let cross_order t (bids : (Price.t, Size.t) list) asks (tradable : tradable) =
+    match tradable with
+    | VALE ->
+      (* if valbz fair value is greater than vale fair value ->
+            if i cant buy more vale (maybe i can profit by conversion) -> convert ALL vale shares to valbz, sell valbz, and then buy more vale
+            (extra: you can calculate diff in holdings and see if it beats the $10 fee & see if we have to do this at all)
+            i can buy vale -> buy vale (in little orders) *)
+          (* if valbz fair value is less than vale fair value ->
+            if i cant sell more vale (maybe i can profit by conversion) -> buy ALL valbz (within pos limit), convert to vale, sell more vale
+            (extra: you can calculate diff in holdings and see if it beats the $10 fee & see if we have to do this at all)
+            i can sell vale -> sell vale (in little orders)
+          *)
+          (match is_vale_underpriced t with
+          | true -> add_buy_order VALE; hedge_buy VALE;
+          | false -> (
+            match is_vale_overpriced t with
+            | true -> add_sell_order VALE; hedge_sell VALE;
+            | false -> () (* TODO : see if there's anything you can do to make money here. sth to do w conversions ?? *)
+          ))
+    | _ -> ()
+end
+
+(* TODO: track open orders *) 
+(* TODO: weighted mid, go down in the books by the quantity you want to trade *)
+(* TODO: implement hedging (buy vale @ 91 and to hedge sell @ 99) *)
+(* use BBO to place orders instead of using a hardcoded price + fade prices *)
+
+let (state_manager : State_manager) = {
+  positions = { bonds = 0 ; valbz = 0 ; vale = 0 }
+  ; fair_values = { bonds = 0 ; valbz = 0 ; vale = 0 }
+}
+
+let get_weighted_fair_value bids asks = 0
+let should_convert_from_valebz_to_vale fv_valebz fv_vale pos_valbz pos_vale =
+  not (Int.equal fv_vale fv_valebz)
 
 (* This is an example of what your ETC bot might look like. You should treat
    this as a starting point, and do not feel beholden to anything that this
@@ -52,7 +131,7 @@ let run exchange_type =
              similar to what's written here! *)
           match message with
           | Open _ ->
-            (match curr.bids_and_asks with
+            (match curr_positions.bonds with
              | quant when quant <= 50 ->
                Exchange_driver.add_order
                  exchange_driver
@@ -62,9 +141,9 @@ let run exchange_type =
                  ~price:(Price.of_int_exn 999)
                  ~size:(Size.of_int_exn 50)
                |> don't_wait_for;
-               curr.bids_and_asks <- curr.bids_and_asks + 50
+               curr_positions.bonds <- curr_positions.bonds + 50
              | _ -> ());
-            (match curr.bids_and_asks with
+            (match curr_positions.bonds with
              | quant when quant >= -50 ->
                Exchange_driver.add_order
                  exchange_driver
@@ -74,18 +153,18 @@ let run exchange_type =
                  ~price:(Price.of_int_exn 1001)
                  ~size:(Size.of_int_exn 50)
                |> don't_wait_for;
-               curr.bids_and_asks <- curr.bids_and_asks - 50
+               curr_positions.bonds <- curr_positions.bonds - 50
              | _ -> ())
           | Hello my_positions ->
             List.iter my_positions ~f:(fun pos ->
               let symbol, position = pos in
               match Symbol.to_string symbol, position with
               | "BOND", quantity_of_bonds ->
-                curr.bids_and_asks
-                <- curr.bids_and_asks + Position.to_int quantity_of_bonds
+                curr_positions.bonds
+                <- curr_positions.bonds + Position.to_int quantity_of_bonds
               | _ -> ())
           | Fill fill ->
-            let new_bids_and_asks = match fill.dir with | Buy -> curr.bids_and_asks + Size.to_int fill.size | Sell -> curr.bids_and_asks - Size.to_int fill.size in
+            let new_bids_and_asks = match fill.dir with | Buy -> curr_positions.bonds + Size.to_int fill.size | Sell -> curr_positions.bonds - Size.to_int fill.size in
             (match new_bids_and_asks >= -100 && new_bids_and_asks <= 100 with
             | true ->
             (match Symbol.to_string fill.symbol with
@@ -98,33 +177,28 @@ let run exchange_type =
                  ~price:fill.price
                  ~size:fill.size
                |> don't_wait_for;
-               curr.bids_and_asks <- new_bids_and_asks
+               curr_positions.bonds <- new_bids_and_asks
              | _ -> ())
              | false -> ())
-          | Reject _ -> printf !"%{sexp: Exchange_message.t}\n%!" message
-          (* | Book book ->
+          | Reject _ -> printf !"%{sexp: Exchange_message.t}\n%!" message 
+          (* 
+            if fair values are the same -> look at the differences in spread (convert to whatever has the bigger spread and trade on that to make money by narrowing the spread)
+            and the spreads are not equal (and beyond a certain threshold) ->  *)
+          (*  *)
+            | Book book ->
             (match Symbol.to_string book.symbol with
-             | "BOND" ->
-               let bids_and_asks = book.book in
-               let bids, asks = bids_and_asks.buy, bids_and_asks.sell in
-               let top_bid, top_ask = List.nth bids 0, List.nth asks 0 in
+             | "BOND" -> ()
+             | "VALEBZ" ->
+              let bids, asks = book.book.buy, book.book.sell in
+               let new_vale_fv = get_weighted_fair_value bids asks in
+               fair_values.vale <- new_vale_fv;
+               state_manager.cross_order.vale bids asks;
+             | "VALE" -> ()
+               (* let top_bid, top_ask = List.nth bids 0, List.nth asks 0 in
                (match top_bid, top_ask with
                 | ( Some (top_bid_price, top_bid_quantity)
                   , Some (top_ask_price, top_ask_quantity) ) ->
-                  (match Price.to_int top_bid_price > 1000 with
-                   | true ->
-                     let order_id =
-                       Order_id_generator.next_id order_id_generator
-                     in
-                     Exchange_driver.add_order
-                       exchange_driver
-                       ~order_id
-                       ~symbol:Symbol.bond
-                       ~dir:Sell
-                       ~price:(Price.of_int_exn (Price.to_int top_ask_price))
-                       ~size:(Size.of_int_exn (Size.to_int top_ask_quantity))
-                     |> don't_wait_for
-                   | false -> ());
+                  fair_values.vale <- 
                   (match Price.to_int top_ask_price < 1000 with
                    | true ->
                      let order_id =
@@ -139,9 +213,8 @@ let run exchange_type =
                        ~size:(Size.of_int_exn (Size.to_int top_bid_quantity))
                      |> don't_wait_for
                    | false -> ())
-                | _ -> ());
-               ()
-             | _ -> ()) *)
+                | _ -> ()) *)
+             | _ -> ())
           | Close _ -> assert false
           | _ -> ())
         (* Regardless of what the message is, print it. You probably won't
