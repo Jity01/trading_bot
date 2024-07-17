@@ -68,6 +68,8 @@ type tradable_record_tpls =
   (* ; mutable wfc : int ; mutable xlf : int *)
 }
 
+let get_lst_without lst ~equal ~without = List.filter lst ~f:(fun elt -> not (equal elt without))
+
 module State_manager = struct
   type t =
     { open_orders : tradable_record_tpls
@@ -80,12 +82,53 @@ module State_manager = struct
   let is_vale_underpriced t = t.fair_values.vale < t.fair_values.valbz
   let is_vale_overpriced t = t.fair_values.vale > t.fair_values.valbz
 
+  let _is_order_id_in lst ~order_id = List.mem lst order_id ~equal:Order_id.equal
+  let cancel_order t ~order_id =
+    Exchange_driver.cancel
+    t.exchange_driver
+    ~order_id
+    |> don't_wait_for;
+    t.open_orders.vale.buys <- get_lst_without t.open_orders.vale.buys ~equal:Order_id.equal ~without:order_id;
+    t.open_orders.vale.sells <- get_lst_without t.open_orders.vale.sells ~equal:Order_id.equal ~without:order_id;
+    t.open_orders.valbz.buys <- get_lst_without t.open_orders.valbz.buys ~equal:Order_id.equal ~without:order_id;
+    t.open_orders.valbz.sells <- get_lst_without t.open_orders.valbz.sells ~equal:Order_id.equal ~without:order_id;
+    t.open_orders.bond.buys <- get_lst_without t.open_orders.bond.buys ~equal:Order_id.equal ~without:order_id;
+    t.open_orders.bond.sells <- get_lst_without t.open_orders.bond.sells ~equal:Order_id.equal ~without:order_id
+
   let has_hit_pos_limit t (tradeable : tradable) =
     match tradeable with
     | VALE -> t.positions.vale > 10 || t.positions.vale < -10
     | VALBZ -> t.positions.valbz > 10 || t.positions.valbz < -10
     | BOND -> t.positions.bond > 100 || t.positions.bond < -100
   ;;
+  let handle_fill t (fill : Exchange_message.Fill.t) =
+    match Symbol.to_string fill.symbol with
+    | "VALE" ->
+      (match fill.dir with
+        | Buy ->
+          t.open_orders.vale.buys <- get_lst_without t.open_orders.vale.buys ~equal:Order_id.equal ~without:fill.order_id;
+          t.positions.vale <- t.positions.vale + (Size.to_int fill.size)
+        | Sell ->
+          t.open_orders.vale.sells <- get_lst_without t.open_orders.vale.sells ~equal:Order_id.equal ~without:fill.order_id;
+          t.positions.vale <- t.positions.vale - (Size.to_int fill.size)
+      )
+    | "BOND" ->
+      (match fill.dir with
+      | Buy ->
+        t.open_orders.bond.buys <- get_lst_without t.open_orders.bond.buys ~equal:Order_id.equal ~without:fill.order_id;
+        t.positions.bond <- t.positions.bond + (Size.to_int fill.size)
+      | Sell ->
+        t.open_orders.bond.sells <- get_lst_without t.open_orders.bond.sells ~equal:Order_id.equal ~without:fill.order_id;
+        t.positions.bond <- t.positions.bond - (Size.to_int fill.size))
+    | "VALBZ" ->
+          (match fill.dir with
+          | Buy ->
+            t.open_orders.valbz.buys <- get_lst_without t.open_orders.valbz.buys ~equal:Order_id.equal ~without:fill.order_id;
+            t.positions.valbz <- t.positions.valbz + (Size.to_int fill.size)
+          | Sell ->
+            t.open_orders.valbz.sells <- get_lst_without t.open_orders.valbz.sells ~equal:Order_id.equal ~without:fill.order_id;
+            t.positions.valbz <- t.positions.valbz - (Size.to_int fill.size))
+    | _ -> ()
 
   let add_sell_order
     t
@@ -106,10 +149,6 @@ module State_manager = struct
            ~price
            ~size
          |> don't_wait_for;
-         (* t.positions.bond <- t.positions.bond - Size.to_int size; *)
-         (* t.order_ids.bond
-         <- List.filter t.order_ids.bond ~f:(fun id ->
-              not (Order_id.equal id order_id)) *)
           t.open_orders.bond.sells <- List.append t.open_orders.bond.sells [ order_id ]
        | true -> ())
     | VALE ->
@@ -123,10 +162,6 @@ module State_manager = struct
            ~price
            ~size
          |> don't_wait_for;
-         (* t.positions.vale <- t.positions.vale - Size.to_int size;
-         t.order_ids.vale
-         <- List.filter t.order_ids.vale ~f:(fun id ->
-              not (Order_id.equal id order_id)) *)
           t.open_orders.vale.sells <- List.append t.open_orders.vale.sells [ order_id ]
        | true -> ())
     | _ -> ()
@@ -216,9 +251,7 @@ module State_manager = struct
            ~price
            ~size
          |> don't_wait_for;
-         (* t.positions.bond <- t.positions.bond + Size.to_int size; *)
         t.open_orders.bond.buys <- List.append t.open_orders.bond.buys [ order_id ]
-         (* t.order_ids.bond <- List.append t.order_ids.bond [ order_id ] *)
        | true -> ())
     | VALE ->
       (match has_hit_pos_limit t VALE with
@@ -232,8 +265,6 @@ module State_manager = struct
         ~price
         ~size
       |> don't_wait_for;
-      (* t.positions.vale <- t.positions.bond + Size.to_int size;
-      t.order_ids.valbz <- List.append t.order_ids.bond [ order_id ] *)
       t.open_orders.vale.buys <- List.append t.open_orders.vale.buys [ order_id ]
     | _ -> ()
   ;;
@@ -280,20 +311,6 @@ module State_manager = struct
   ;;
 end
 
-(* let update_positions t positions = List.iter my_positions ~f:(fun pos ->
-   let symbol, position = pos in match Symbol.to_string symbol, position with
-   | "BOND", quantity_of_bonds -> curr_positions.bonds <-
-   curr_positions.bonds + Position.to_int quantity_of_bonds | _ -> ()) | Fill
-   fill -> let new_bids_and_asks = match fill.dir with | Buy ->
-   curr_positions.bonds + Size.to_int fill.size | Sell ->
-   curr_positions.bonds - Size.to_int fill.size in (match new_bids_and_asks
-   >= -100 && new_bids_and_asks <= 100 with | true -> (match Symbol.to_string
-   fill.symbol with | "BOND" -> Exchange_driver.add_order exchange_driver
-   ~order_id:(Order_id_generator.next_id order_id_generator)
-   ~symbol:Symbol.bond ~dir:fill.dir ~price:fill.price ~size:fill.size |>
-   don't_wait_for; curr_positions.bonds <- new_bids_and_asks | _ -> ()) |
-   false -> ()) *)
-
 (* TODO: track open orders *)
 (* TODO: weighted mid, go down in the books by the quantity you want to
    trade *)
@@ -323,53 +340,27 @@ let should_convert_from_valebz_to_vale fv_valebz fv_vale pos_valbz pos_vale =
   not (Int.equal fv_vale fv_valebz)
 ;;
 
-(* This is an example of what your ETC bot might look like. You should treat
-   this as a starting point, and do not feel beholden to anything that this
-   code is doing! Feel free to delete, add, and reorganize code however you
-   would like. (Indeed, you should change the logic here! It does not make
-   sense!) *)
 let run exchange_type =
   (* Set up a connection to the exchange. *)
   Exchange_driver.connect_and_run
     exchange_type
     ~f:(fun ~exchange_driver ~exchange_messages ->
-      (* Initiate the [Order_id_generator], which will help us get unique ids
-         to attach to the orders we send to the exchange. You don't have to
-         use this, but it'll make coming up with valid order ids a bit
-         easier. Feel free to open up order_id_generator.ml to see how the
-         code works. *)
       let (state_manager : State_manager.t) =
         { positions = { bond = 0; valbz = 0; vale = 0 }
-        ; fair_values = { bond = 0; valbz = 0; vale = 0 }
+        ; fair_values = { bond = 1000; valbz = 0; vale = 0 }
         ; exchange_driver
         ; order_id_generator = Order_id_generator.create ()
         ; open_orders = { bond = { buys = [] ; sells = []} ; vale = { buys = [] ; sells = []} ; valbz = { buys = [] ; sells = []} }
         }
       in
-      state_manager.order_ids.valbz |> ignore;
       let read_messages_and_do_some_stuff () =
         Async.Pipe.iter_without_pushback exchange_messages ~f:(fun message ->
           match message with
           | Open _ -> State_manager.add_order_at_open state_manager
           | Close _ -> assert false
-          | Hello my_positions ->
-            State_manager.update_positions state_manager my_positions
-          | Reject rej ->
-            (match
-               (List.mem
-                 state_manager.open_orders.vale.buys
-                 rej.order_id
-                 ~equal:Order_id.equal) || (List.mem
-                 state_manager.open_orders.vale.sells
-                 rej.order_id
-                 ~equal:Order_id.equal)
-             with
-             | true -> printf !"rejected vale"
-             | false -> printf "rejected bond")
-          | Ack _ -> printf !"%{sexp: Exchange_message.t}\n%!" message
-          | Fill fill ->
-            (match Symbol.to_string fill.symbol with
-            | "VALE" -> match )
+          | Hello my_positions -> State_manager.update_positions state_manager my_positions
+          | Reject rej -> printf !"%{sexp: Exchange_message.t}\n%!" message; State_manager.cancel_order state_manager ~order_id:rej.order_id
+          | Fill fill -> printf !"%{sexp: Exchange_message.t}\n%!" message; State_manager.handle_fill state_manager fill
           | Book book ->
             (match Symbol.to_string book.symbol with
              | "VALBZ" ->
@@ -385,7 +376,7 @@ let run exchange_type =
                  get_weighted_fair_value state_manager VALE bids asks
                in
                state_manager.fair_values.vale <- new_vale_fv;
-               print_s [%sexp (state_manager.positions : tradable_record)];
+               (* print_s [%sexp (state_manager.positions : tradable_record)]; *)
                State_manager.cross_order
                  state_manager
                  ~trading:VALE
