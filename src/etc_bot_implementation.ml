@@ -477,8 +477,7 @@ module State_manager = struct
     | VALBZ ->
       t.open_orders.valbz.buys
       <- List.append t.open_orders.valbz.buys [ order_id ];
-      t.nums_of_open_orders.buys.valbz
-      <- t.nums_of_open_orders.buys.valbz + 1
+      t.nums_of_open_orders.buys.valbz <- t.nums_of_open_orders.buys.valbz + size
     | BOND ->
       t.open_orders.bond.buys
       <- List.append t.open_orders.bond.buys [ order_id ];
