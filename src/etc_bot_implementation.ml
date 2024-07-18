@@ -16,14 +16,14 @@ let run_every seconds ~f =
 
 module Tradeable = struct
   type t =
-  | BOND
-  | VALBZ
-  | VALE
-  | XLF
-  | GS
-  | MS
-  | WFC
-[@@deriving sexp, equal]
+    | BOND
+    | VALBZ
+    | VALE
+    | XLF
+    | GS
+    | MS
+    | WFC
+  [@@deriving sexp, equal]
 end
 
 let symbol_to_tradable (sym : Symbol.t) =
@@ -35,6 +35,7 @@ let symbol_to_tradable (sym : Symbol.t) =
   | "GS" -> GS
   | "MS" -> MS
   | _ -> WFC
+;;
 
 let tradable_to_symbol (trading : Tradeable.t) =
   match trading with
@@ -45,6 +46,7 @@ let tradable_to_symbol (trading : Tradeable.t) =
   | GS -> Symbol.of_string_exn "GS"
   | MS -> Symbol.of_string_exn "MS"
   | WFC -> Symbol.of_string_exn "WFC"
+;;
 
 type tradable_record =
   { mutable bond : int
@@ -63,20 +65,20 @@ type buys_sells =
   }
 
 type tradable_record_tpls =
-  { mutable bond : buys_sells
-  ; mutable valbz : buys_sells
-  ; mutable vale : buys_sells
-  ; mutable xlf : buys_sells
-  ; mutable gs : buys_sells
-  ; mutable ms : buys_sells
-  ; mutable wfc : buys_sells
+  { bond : buys_sells
+  ; valbz : buys_sells
+  ; vale : buys_sells
+  ; xlf : buys_sells
+  ; gs : buys_sells
+  ; ms : buys_sells
+  ; wfc : buys_sells
   }
 
 type offer = int * int
 
 type best_bid_and_ask =
-  { mutable best_bid : offer
-  ; mutable best_ask : offer
+  { best_bid : offer
+  ; best_ask : offer
   }
 
 type tradable_best_bids_asks =
@@ -125,36 +127,44 @@ module State_manager = struct
     }
   (* TODO : change the prices to floats instead ?? *)
 
-  let get_weighted_best_bid_of_xlf_securities t =
-    Int.of_float
-      ((Float.of_int (fst t.best_bid_and_ask.wfc.best_bid)
-        *. (Float.of_int xlf_proportions.wfc
-            /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.gs.best_bid)
-           *. (Float.of_int xlf_proportions.gs
-               /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.ms.best_bid)
-           *. (Float.of_int xlf_proportions.ms
-               /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.bond.best_bid)
-           *. (Float.of_int xlf_proportions.bond
-               /. Float.of_int xlf_total_securities)))
+  let get_weighted_best_bid_of_etf_securities t ~(trading : Tradeable.t) =
+    match trading with
+    | VALE -> fst t.best_bid_and_ask.valbz.best_bid
+    | XLF ->
+      Int.of_float
+        ((Float.of_int (fst t.best_bid_and_ask.wfc.best_bid)
+          *. (Float.of_int xlf_proportions.wfc
+              /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.gs.best_bid)
+             *. (Float.of_int xlf_proportions.gs
+                 /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.ms.best_bid)
+             *. (Float.of_int xlf_proportions.ms
+                 /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.bond.best_bid)
+             *. (Float.of_int xlf_proportions.bond
+                 /. Float.of_int xlf_total_securities)))
+    | _ -> 0
   ;;
 
-  let get_weighted_best_ask_of_xlf_securities t =
-    Int.of_float
-      ((Float.of_int (fst t.best_bid_and_ask.wfc.best_ask)
-        *. (Float.of_int xlf_proportions.wfc
-            /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.gs.best_ask)
-           *. (Float.of_int xlf_proportions.gs
-               /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.ms.best_ask)
-           *. (Float.of_int xlf_proportions.ms
-               /. Float.of_int xlf_total_securities))
-       +. (Float.of_int (fst t.best_bid_and_ask.bond.best_ask)
-           *. (Float.of_int xlf_proportions.bond
-               /. Float.of_int xlf_total_securities)))
+  let get_weighted_best_ask_of_etf_securities t ~(trading : Tradeable.t) =
+    match trading with
+    | VALE -> fst t.best_bid_and_ask.valbz.best_ask
+    | XLF ->
+      Int.of_float
+        ((Float.of_int (fst t.best_bid_and_ask.wfc.best_ask)
+          *. (Float.of_int xlf_proportions.wfc
+              /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.gs.best_ask)
+             *. (Float.of_int xlf_proportions.gs
+                 /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.ms.best_ask)
+             *. (Float.of_int xlf_proportions.ms
+                 /. Float.of_int xlf_total_securities))
+         +. (Float.of_int (fst t.best_bid_and_ask.bond.best_ask)
+             *. (Float.of_int xlf_proportions.bond
+                 /. Float.of_int xlf_total_securities)))
+    | _ -> 0
   ;;
 
   let can_tighten_vale_by_buying t =
@@ -169,11 +179,12 @@ module State_manager = struct
 
   let can_tighten_xlf_by_buying t =
     fst t.best_bid_and_ask.xlf.best_bid
-    < get_weighted_best_bid_of_xlf_securities t
-  
+    < get_weighted_best_bid_of_etf_securities t ~trading:XLF
+  ;;
+
   let can_tighten_xlf_by_selling t =
     fst t.best_bid_and_ask.xlf.best_ask
-    > get_weighted_best_ask_of_xlf_securities t
+    > get_weighted_best_ask_of_etf_securities t ~trading:XLF
   ;;
 
   let is_vale_underpriced t =
@@ -188,12 +199,12 @@ module State_manager = struct
 
   let is_xlf_underpriced t =
     fst t.best_bid_and_ask.xlf.best_ask
-    < get_weighted_best_bid_of_xlf_securities t
+    < get_weighted_best_bid_of_etf_securities t ~trading:XLF
   ;;
 
   let is_xlf_overpriced t =
     fst t.best_bid_and_ask.xlf.best_bid
-    > get_weighted_best_ask_of_xlf_securities t
+    > get_weighted_best_ask_of_etf_securities t ~trading:XLF
   ;;
 
   let get_best_bid t ~(trading : Tradeable.t) =
@@ -316,12 +327,16 @@ module State_manager = struct
   ;;
 
   let get_positions_of ~trading new_positions =
-      List.filter_map new_positions ~f:(fun (symbol, position) ->
-        match Tradeable.equal trading (symbol_to_tradable symbol) with
-        | true -> Some (Position.to_int position)
-        | _ -> None)
-    
-  let update_positions_on_hello t (new_positions : (Symbol.t * Position.t) list) =
+    List.filter_map new_positions ~f:(fun (symbol, position) ->
+      match Tradeable.equal trading (symbol_to_tradable symbol) with
+      | true -> Some (Position.to_int position)
+      | _ -> None)
+  ;;
+
+  let update_positions_on_hello
+    t
+    (new_positions : (Symbol.t * Position.t) list)
+    =
     let bond_positions = get_positions_of ~trading:BOND new_positions in
     let vale_positions = get_positions_of ~trading:VALE new_positions in
     let valbz_positions = get_positions_of ~trading:VALBZ new_positions in
@@ -335,7 +350,7 @@ module State_manager = struct
     t.positions.wfc <- sum_positions wfc_positions;
     t.positions.gs <- sum_positions gs_positions;
     t.positions.ms <- sum_positions ms_positions;
-    t.positions.xlf <- sum_positions xlf_positions;
+    t.positions.xlf <- sum_positions xlf_positions
   ;;
 
   let execute_unit_order t ~(trading : Tradeable.t) ~price ~dir ~order_id =
@@ -369,40 +384,40 @@ module State_manager = struct
       |> don't_wait_for
     | XLF ->
       Exchange_driver.add_order
-      t.exchange_driver
-      ~order_id
-      ~symbol:Symbol.xlf
-      ~dir
-      ~price
-      ~size:(Size.of_int_exn unit_size)
-    |> don't_wait_for
+        t.exchange_driver
+        ~order_id
+        ~symbol:Symbol.xlf
+        ~dir
+        ~price
+        ~size:(Size.of_int_exn unit_size)
+      |> don't_wait_for
     | MS ->
       Exchange_driver.add_order
-      t.exchange_driver
-      ~order_id
-      ~symbol:Symbol.ms
-      ~dir
-      ~price
-      ~size:(Size.of_int_exn unit_size)
-    |> don't_wait_for
+        t.exchange_driver
+        ~order_id
+        ~symbol:Symbol.ms
+        ~dir
+        ~price
+        ~size:(Size.of_int_exn unit_size)
+      |> don't_wait_for
     | GS ->
       Exchange_driver.add_order
-      t.exchange_driver
-      ~order_id
-      ~symbol:Symbol.gs
-      ~dir
-      ~price
-      ~size:(Size.of_int_exn unit_size)
-    |> don't_wait_for
+        t.exchange_driver
+        ~order_id
+        ~symbol:Symbol.gs
+        ~dir
+        ~price
+        ~size:(Size.of_int_exn unit_size)
+      |> don't_wait_for
     | WFC ->
       Exchange_driver.add_order
-      t.exchange_driver
-      ~order_id
-      ~symbol:Symbol.wfc
-      ~dir
-      ~price
-      ~size:(Size.of_int_exn unit_size)
-    |> don't_wait_for
+        t.exchange_driver
+        ~order_id
+        ~symbol:Symbol.wfc
+        ~dir
+        ~price
+        ~size:(Size.of_int_exn unit_size)
+      |> don't_wait_for
   ;;
 
   let update_open_orders_on_buy_order t ~(trading : Tradeable.t) ~order_id =
@@ -420,11 +435,9 @@ module State_manager = struct
       t.open_orders.xlf.buys
       <- List.append t.open_orders.xlf.buys [ order_id ]
     | GS ->
-      t.open_orders.gs.buys
-      <- List.append t.open_orders.gs.buys [ order_id ]
+      t.open_orders.gs.buys <- List.append t.open_orders.gs.buys [ order_id ]
     | MS ->
-      t.open_orders.ms.buys
-      <- List.append t.open_orders.ms.buys [ order_id ]
+      t.open_orders.ms.buys <- List.append t.open_orders.ms.buys [ order_id ]
     | WFC ->
       t.open_orders.wfc.buys
       <- List.append t.open_orders.wfc.buys [ order_id ]
@@ -504,41 +517,63 @@ module State_manager = struct
   ;;
 
   let add_order_at_open t = ()
-    (* add_buy_order
-      t
-      ~trading:BOND
-      ~price:(Price.of_int_exn 999)
-      ~size:(Size.of_int_exn 50); *)
-    (* add_sell_order
-      t
-      ~trading:BOND
-      ~price:(Price.of_int_exn 1001)
-      ~size:(Size.of_int_exn 50) *)
-  ;;
+  (* add_buy_order t ~trading:BOND ~price:(Price.of_int_exn 999)
+     ~size:(Size.of_int_exn 50); *)
+  (* add_sell_order t ~trading:BOND ~price:(Price.of_int_exn 1001)
+     ~size:(Size.of_int_exn 50) *)
 
   let convert_etf_to_its_securities t ~(etf : Tradeable.t) =
     let order_id = Order_id_generator.next_id t.order_id_generator in
-    match t.positions.vale > 0 with
-    | true ->
-      Exchange_driver.convert
-        t.exchange_driver
-        ~order_id
-        ~symbol:(tradable_to_symbol VALE)
-        ~dir:Sell
-        ~size:(Size.of_int_exn t.positions.vale)
-      |> don't_wait_for;
-      t.positions.valbz <- t.positions.vale + t.positions.valbz;
-      t.positions.vale <- 0
-    | false ->
-      Exchange_driver.convert
-        t.exchange_driver
-        ~order_id
-        ~symbol:(Symbol.of_string_exn "VALE")
-        ~dir:Buy
-        ~size:(Size.of_int_exn (-1 * t.positions.vale))
-      |> don't_wait_for;
-      t.positions.valbz <- t.positions.vale + t.positions.valbz;
-      t.positions.vale <- 0
+    match etf with
+    | VALE ->
+      (match t.positions.vale > 0 with
+       | true ->
+         Exchange_driver.convert
+           t.exchange_driver
+           ~order_id
+           ~symbol:(tradable_to_symbol VALE)
+           ~dir:Sell
+           ~size:(Size.of_int_exn t.positions.vale)
+         |> don't_wait_for;
+         t.positions.valbz <- t.positions.vale + t.positions.valbz;
+         t.positions.vale <- 0
+       | false ->
+         Exchange_driver.convert
+           t.exchange_driver
+           ~order_id
+           ~symbol:(tradable_to_symbol VALE)
+           ~dir:Buy
+           ~size:(Size.of_int_exn (-1 * t.positions.vale))
+         |> don't_wait_for;
+         t.positions.valbz <- t.positions.vale + t.positions.valbz;
+         t.positions.vale <- 0)
+    | XLF ->
+      (match t.positions.xlf > 0 with
+       | true ->
+         Exchange_driver.convert
+           t.exchange_driver
+           ~order_id
+           ~symbol:(tradable_to_symbol XLF)
+           ~dir:Sell
+           ~size:(Size.of_int_exn t.positions.xlf)
+         |> don't_wait_for;
+         t.positions.bond <- 0;
+         t.positions.gs <- 0;
+         t.positions.ms <- 0;
+         t.positions.wfc <- 0
+       | false ->
+         Exchange_driver.convert
+           t.exchange_driver
+           ~order_id
+           ~symbol:(tradable_to_symbol XLF)
+           ~dir:Buy
+           ~size:(Size.of_int_exn (-1 * t.positions.xlf))
+         |> don't_wait_for;
+         t.positions.bond <- 0;
+         t.positions.gs <- 0;
+         t.positions.ms <- 0;
+         t.positions.wfc <- 0)
+    | _ -> ()
   ;;
 
   let fade_buy t ~(trading : Tradeable.t) ~price_start ~price_end =
@@ -561,107 +596,65 @@ module State_manager = struct
         ~size:(Size.of_int_exn unit_size))
   ;;
 
-  let cross_order t ~bids ~asks ~(trading : Tradeable.t) =
-    match trading with
-    | VALE ->
-      (* vale is underpriced. willing to buy vale @ ask price and hedge sell
-         valbz @ buy price. *)
-      (match is_vale_underpriced t with
+  let cross_order
+    t
+    ~bids
+    ~asks
+    ~(trading : Tradeable.t)
+    ~is_etf_underpriced
+    ~is_etf_overpriced
+    ~can_tighten_etf_spread_by_buying
+    ~can_tighten_etf_spread_by_selling
+    =
+    match is_etf_underpriced with
+    | true ->
+      (* etf is underpriced. willing to buy etf @ ask price and hedge sell
+         its constituents @ their buy prices. *)
+      (* print_endline (Printf.sprintf "vale is underpriced. vale fv: %i.
+         valbz fv: %i\n" t.fair_values.vale t.fair_values.valbz ); *)
+      (match has_hit_pos_limit t trading with
+       | true -> convert_etf_to_its_securities t ~etf:trading
+       | false -> ());
+      let price, size = get_best_ask t ~trading in
+      add_buy_order
+        t
+        ~trading
+        ~price:(Price.of_int_exn price)
+        ~size:(Size.of_int_exn size)
+    | false ->
+      (* etf is overpriced. willing to sell etf @ bid price and hedge buy its
+         constituents @ their ask prices. *)
+      (match is_etf_overpriced with
        | true ->
-         (* print_endline (Printf.sprintf "vale is underpriced. vale fv: %i.
+         (* print_endline (Printf.sprintf "vale is overpriced. vale fv: %i.
             valbz fv: %i\n" t.fair_values.vale t.fair_values.valbz ); *)
-         (match has_hit_pos_limit t VALE with
-          | true -> convert_etf_to_its_securities t ~etf:VALE
+         (match has_hit_pos_limit t trading with
+          | true -> convert_etf_to_its_securities t ~etf:trading
           | false -> ());
-         let price, size = t.best_bid_and_ask.vale.best_ask in
-         add_buy_order
+         let price, size = get_best_ask t ~trading in
+         add_sell_order
            t
-           ~trading:VALE
+           ~trading
            ~price:(Price.of_int_exn price)
            ~size:(Size.of_int_exn size)
        | false ->
-         (* vale is overpriced. willing to sell vale @ bid price and hedge
-            buy valbz @ ask price. *)
-         (match is_vale_overpriced t with
+         (match can_tighten_etf_spread_by_buying with
+          | false -> ()
           | true ->
-            (* print_endline (Printf.sprintf "vale is overpriced. vale fv:
-               %i. valbz fv: %i\n" t.fair_values.vale t.fair_values.valbz
-               ); *)
-            (match has_hit_pos_limit t VALE with
-             | true -> convert_etf_to_its_securities t ~etf:VALE
-             | false -> ());
-            let price, size = t.best_bid_and_ask.vale.best_bid in
-            add_sell_order
+            fade_buy
               t
-              ~trading:VALE
-              ~price:(Price.of_int_exn price)
-              ~size:(Size.of_int_exn size)
-          | false ->
-            (match can_tighten_vale_by_buying t with
-             | false -> ()
-             | true ->
-               fade_buy
-                 t
-                 ~trading:VALE
-                 ~price_start:(fst t.best_bid_and_ask.vale.best_bid)
-                 ~price_end:(fst t.best_bid_and_ask.valbz.best_bid));
-            (match can_tighten_vale_by_selling t with
-             | false -> ()
-             | true ->
-               fade_sell
-                 t
-                 ~trading:VALE
-                 ~price_start:(fst t.best_bid_and_ask.valbz.best_ask)
-                 ~price_end:(fst t.best_bid_and_ask.vale.best_ask))))
-    | XLF ->
-      (* xlf is underpriced. willing to buy xlf @ ask price and hedge sell
-         its underlying securities @ their respective buy prices. *)
-         (match is_xlf_underpriced t with
-         | true ->
-           (match has_hit_pos_limit t XLF with
-            | true -> convert_etf_to_its_securities t ~etf:XLF
-            | false -> ());
-           let price, size = t.best_bid_and_ask.xlf.best_ask in
-           add_buy_order
-             t
-             ~trading:XLF
-             ~price:(Price.of_int_exn price)
-             ~size:(Size.of_int_exn size)
-         | false ->
-           (* xlf is overpriced. willing to sell xlf @ bid price and hedge
-              buy its underlying securities @ their respective ask prices. *)
-           (match is_xlf_overpriced t with
-            | true ->
-              (* print_endline (Printf.sprintf "vale is overpriced. vale fv:
-                 %i. valbz fv: %i\n" t.fair_values.vale t.fair_values.valbz
-                 ); *)
-              (match has_hit_pos_limit t XLF with
-               | true -> convert_etf_to_its_securities t ~etf:XLF
-               | false -> ());
-              let price, size = t.best_bid_and_ask.xlf.best_bid in
-              add_sell_order
-                t
-                ~trading:XLF
-                ~price:(Price.of_int_exn price)
-                ~size:(Size.of_int_exn size)
-            | false ->
-              (match can_tighten_xlf_by_buying t with
-               | false -> ()
-               | true ->
-                 fade_buy
-                   t
-                   ~trading:XLF
-                   ~price_start:(fst t.best_bid_and_ask.xlf.best_bid)
-                   ~price_end:(get_weighted_best_bid_of_xlf_securities t));
-              (match can_tighten_vale_by_selling t with
-               | false -> ()
-               | true ->
-                 fade_sell
-                   t
-                   ~trading:XLF
-                   ~price_start:(fst t.best_bid_and_ask.xlf.best_ask)
-                   ~price_end:(get_weighted_best_ask_of_xlf_securities t))))
-    | _ -> ()
+              ~trading
+              ~price_start:(fst (get_best_bid t ~trading))
+              ~price_end:(get_weighted_best_bid_of_etf_securities t ~trading));
+         (match can_tighten_etf_spread_by_selling with
+          | false -> ()
+          | true ->
+            fade_sell
+              t
+              ~trading
+              ~price_start:
+                (get_weighted_best_ask_of_etf_securities t ~trading)
+              ~price_end:(fst (get_best_ask t ~trading))))
   ;;
 
   let remove_open_order t ~order_id =
@@ -734,26 +727,30 @@ module State_manager = struct
     <- get_lst_without
          t.open_orders.gs.sells
          ~equal:Order_id.equal
-         ~without:order_id;
+         ~without:order_id
   ;;
 
   let cancel_order t ~order_id =
     Exchange_driver.cancel t.exchange_driver ~order_id |> don't_wait_for;
     remove_open_order t ~order_id
   ;;
+
   let get_pos_diff_by_dir ~diff ~(dir : Dir.t) =
     match dir with Sell -> -1 * diff | Buy -> diff
   ;;
 
-  let update_positions_on_fill t ~trading ~(fill : Exchange_message.Fill.t) =
+  let update_positions_on_fill t ~(trading : Tradeable.t) ~(fill : Exchange_message.Fill.t) =
     let pos_diff =
       get_pos_diff_by_dir ~diff:(Size.to_int fill.size) ~dir:fill.dir
     in
     match trading with
-    | "VALE" -> t.positions.vale <- t.positions.vale + pos_diff
-    | "VALBZ" -> t.positions.valbz <- t.positions.valbz + pos_diff
-    | "BOND" -> t.positions.bond <- t.positions.bond + pos_diff
-    | _ -> ()
+    | VALE -> t.positions.vale <- t.positions.vale + pos_diff
+    | VALBZ -> t.positions.valbz <- t.positions.valbz + pos_diff
+    | BOND -> t.positions.bond <- t.positions.bond + pos_diff
+    | XLF -> t.positions.xlf <- t.positions.xlf + pos_diff
+    | WFC -> t.positions.wfc <- t.positions.wfc + pos_diff
+    | GS -> t.positions.gs <- t.positions.gs + pos_diff
+    | MS -> t.positions.ms <- t.positions.ms + pos_diff
   ;;
 
   let hedge_vale_on_fill t (fill : Exchange_message.Fill.t) =
@@ -774,6 +771,56 @@ module State_manager = struct
         ~size:fill.size
   ;;
 
+  let hedge_xlf_on_fill t (fill : Exchange_message.Fill.t) =
+    match fill.dir with
+    | Buy ->
+      (* hedge sell securities *)
+      add_sell_order
+        t
+        ~trading:BOND
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_bid))
+        ~size:
+          (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
+      add_sell_order
+        t
+        ~trading:WFC
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_bid))
+        ~size:(Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
+      add_sell_order
+        t
+        ~trading:GS
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_bid))
+        ~size:(Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
+      add_sell_order
+        t
+        ~trading:MS
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_bid))
+        ~size:(Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size))
+    | Sell ->
+      (* hedge buy securities *)
+      add_buy_order
+        t
+        ~trading:BOND
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_ask))
+        ~size:
+          (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
+      add_buy_order
+        t
+        ~trading:WFC
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_ask))
+        ~size:(Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
+      add_buy_order
+        t
+        ~trading:GS
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_ask))
+        ~size:(Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
+      add_buy_order
+        t
+        ~trading:MS
+        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_bid))
+        ~size:(Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size))
+  ;;
+
   let refill_bond_requests_on_fill t (fill : Exchange_message.Fill.t) =
     match fill.dir with
     | Buy -> add_buy_order t ~trading:BOND ~price:fill.price ~size:fill.size
@@ -783,12 +830,12 @@ module State_manager = struct
 
   let handle_fill t (fill : Exchange_message.Fill.t) =
     remove_open_order t ~order_id:fill.order_id;
-    update_positions_on_fill t ~trading:(Symbol.to_string fill.symbol) ~fill;
+    update_positions_on_fill t ~trading:(symbol_to_tradable fill.symbol) ~fill;
     (* custom logic for bonds (re-filling requests) and vale (hedging through
        valbz) *)
-    match Symbol.to_string fill.symbol with
-    | "VALE" -> hedge_vale_on_fill t fill
-    | "BOND" -> refill_bond_requests_on_fill t fill
+    match symbol_to_tradable fill.symbol with
+    | VALE -> hedge_vale_on_fill t fill
+    | XLF -> hedge_xlf_on_fill t fill
     | _ -> ()
   ;;
 
@@ -820,7 +867,15 @@ let run exchange_type =
     exchange_type
     ~f:(fun ~exchange_driver ~exchange_messages ->
       let (state_manager : State_manager.t) =
-        { positions = { bond = 0; valbz = 0; vale = 0; gs = 0; ms = 0; wfc = 0; xlf = 0 }
+        { positions =
+            { bond = 0
+            ; valbz = 0
+            ; vale = 0
+            ; gs = 0
+            ; ms = 0
+            ; wfc = 0
+            ; xlf = 0
+            }
         ; exchange_driver
         ; order_id_generator = Order_id_generator.create ()
         ; open_orders =
@@ -848,7 +903,9 @@ let run exchange_type =
           match message with
           | Close _ -> assert false
           | Hello my_positions ->
-            State_manager.update_positions_on_hello state_manager my_positions
+            State_manager.update_positions_on_hello
+              state_manager
+              my_positions
           | Reject rej ->
             printf !"%{sexp: Exchange_message.t}\n%!" message;
             State_manager.cancel_order state_manager ~order_id:rej.order_id
@@ -865,47 +922,62 @@ let run exchange_type =
                  ~trading:VALBZ
                  ~bids
                  ~asks
-              | WFC ->
+             | WFC ->
                State_manager.update_best_bid_and_ask_prices
                  state_manager
                  ~trading:WFC
                  ~bids
                  ~asks
-              | GS ->
+             | GS ->
                State_manager.update_best_bid_and_ask_prices
                  state_manager
                  ~trading:GS
                  ~bids
                  ~asks
-              | MS ->
+             | MS ->
                State_manager.update_best_bid_and_ask_prices
                  state_manager
                  ~trading:MS
                  ~bids
                  ~asks
-              | VALE ->
-                State_manager.update_best_bid_and_ask_prices
-                  state_manager
-                  ~trading:VALE
-                  ~bids
-                  ~asks;
-                State_manager.cross_order
-                  state_manager
-                  ~trading:VALE
-                  ~bids
-                  ~asks
-              | XLF ->
-                State_manager.update_best_bid_and_ask_prices
-                  state_manager
-                  ~trading:XLF
-                  ~bids
-                  ~asks;
-                State_manager.cross_order
-                  state_manager
-                  ~trading:XLF
-                  ~bids
-                  ~asks
-              )
+             | VALE ->
+               State_manager.update_best_bid_and_ask_prices
+                 state_manager
+                 ~trading:VALE
+                 ~bids
+                 ~asks;
+               State_manager.cross_order
+                 state_manager
+                 ~trading:VALE
+                 ~bids
+                 ~asks
+                 ~is_etf_underpriced:
+                   (State_manager.is_vale_underpriced state_manager)
+                 ~is_etf_overpriced:
+                   (State_manager.is_vale_overpriced state_manager)
+                 ~can_tighten_etf_spread_by_buying:
+                   (State_manager.can_tighten_vale_by_buying state_manager)
+                 ~can_tighten_etf_spread_by_selling:
+                   (State_manager.can_tighten_vale_by_selling state_manager)
+             | XLF ->
+               State_manager.update_best_bid_and_ask_prices
+                 state_manager
+                 ~trading:XLF
+                 ~bids
+                 ~asks;
+               State_manager.cross_order
+                 state_manager
+                 ~trading:XLF
+                 ~bids
+                 ~asks
+                 ~is_etf_underpriced:
+                   (State_manager.is_xlf_underpriced state_manager)
+                 ~is_etf_overpriced:
+                   (State_manager.is_xlf_overpriced state_manager)
+                 ~can_tighten_etf_spread_by_buying:
+                   (State_manager.can_tighten_xlf_by_buying state_manager)
+                 ~can_tighten_etf_spread_by_selling:
+                   (State_manager.can_tighten_xlf_by_selling state_manager))
           | _ -> ())
       in
       read_messages_and_do_some_stuff ())
