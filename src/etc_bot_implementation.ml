@@ -12,7 +12,9 @@ let run_every seconds ~f =
    to whatever has the bigger spread and trade on that to make money by
    narrowing the spread) and the spreads are not equal (and beyond a certain
    threshold) -> *)
-(* *)
+
+(* TODO : VERY IMPORTANT -> CANCEL ORDERS WHEN FAIRVALUE IS NOT GOOD TO YOU.
+   DONT MAKE STUPID TRADES I BEG *)
 
 module Tradeable = struct
   type t =
@@ -23,7 +25,7 @@ module Tradeable = struct
     | GS
     | MS
     | WFC
-  [@@deriving sexp, equal]
+  [@@deriving sexp_of, equal]
 end
 
 let symbol_to_tradable (sym : Symbol.t) =
@@ -57,7 +59,7 @@ type tradable_record =
   ; mutable ms : int
   ; mutable wfc : int
   }
-[@@deriving sexp]
+[@@deriving sexp_of]
 
 type buys_sells =
   { mutable buys : Order_id.t list
@@ -74,12 +76,13 @@ type tradable_record_tpls =
   ; wfc : buys_sells
   }
 
-type offer = int * int
+type offer = int * int [@@deriving sexp_of]
 
 type best_bid_and_ask =
   { best_bid : offer
   ; best_ask : offer
   }
+[@@deriving sexp_of]
 
 type tradable_best_bids_asks =
   { mutable bond : best_bid_and_ask
@@ -90,6 +93,7 @@ type tradable_best_bids_asks =
   ; mutable ms : best_bid_and_ask
   ; mutable wfc : best_bid_and_ask
   }
+[@@deriving sexp_of]
 
 type xlf_props =
   { bond : int
@@ -113,6 +117,11 @@ let xlf_total_securities = 10
 let (xlf_proportions : xlf_props) = { bond = 3; ms = 3; gs = 2; wfc = 2 }
 let unit_size = 1
 
+type xlf_shares_tracker =
+  { mutable bought : int
+  ; mutable sells : int
+  }
+
 let get_lst_without lst ~equal ~without =
   List.filter lst ~f:(fun elt -> not (equal elt without))
 ;;
@@ -124,26 +133,45 @@ module State_manager = struct
     ; exchange_driver : Exchange_driver.t
     ; order_id_generator : Order_id_generator.t
     ; best_bid_and_ask : tradable_best_bids_asks
+    ; xlf_shares_tracker : xlf_shares_tracker
     }
   (* TODO : change the prices to floats instead ?? *)
+
+  let get_num_of_open_buy_orders t ~(trading : Tradeable.t) =
+    match trading with
+    | VALE -> List.length t.open_orders.vale.buys
+    | VALBZ -> List.length t.open_orders.valbz.buys
+    | _ -> 0
+  ;;
+
+  let get_num_of_open_sell_orders t ~(trading : Tradeable.t) =
+    match trading with
+    | VALE -> List.length t.open_orders.vale.sells
+    | VALBZ -> List.length t.open_orders.valbz.sells
+    | _ -> 0
+  ;;
 
   let get_weighted_best_bid_of_etf_securities t ~(trading : Tradeable.t) =
     match trading with
     | VALE -> fst t.best_bid_and_ask.valbz.best_bid
     | XLF ->
-      Int.of_float
-        ((Float.of_int (fst t.best_bid_and_ask.wfc.best_bid)
-          *. (Float.of_int xlf_proportions.wfc
-              /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.gs.best_bid)
-             *. (Float.of_int xlf_proportions.gs
-                 /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.ms.best_bid)
-             *. (Float.of_int xlf_proportions.ms
-                 /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.bond.best_bid)
-             *. (Float.of_int xlf_proportions.bond
-                 /. Float.of_int xlf_total_securities)))
+      let price =
+        Int.of_float
+          ((Float.of_int (fst t.best_bid_and_ask.wfc.best_bid)
+            *. (Float.of_int xlf_proportions.wfc
+                /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.gs.best_bid)
+               *. (Float.of_int xlf_proportions.gs
+                   /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.ms.best_bid)
+               *. (Float.of_int xlf_proportions.ms
+                   /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.bond.best_bid)
+               *. (Float.of_int xlf_proportions.bond
+                   /. Float.of_int xlf_total_securities)))
+      in
+      print_s [%message (price : int)];
+      price
     | _ -> 0
   ;;
 
@@ -151,19 +179,23 @@ module State_manager = struct
     match trading with
     | VALE -> fst t.best_bid_and_ask.valbz.best_ask
     | XLF ->
-      Int.of_float
-        ((Float.of_int (fst t.best_bid_and_ask.wfc.best_ask)
-          *. (Float.of_int xlf_proportions.wfc
-              /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.gs.best_ask)
-             *. (Float.of_int xlf_proportions.gs
-                 /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.ms.best_ask)
-             *. (Float.of_int xlf_proportions.ms
-                 /. Float.of_int xlf_total_securities))
-         +. (Float.of_int (fst t.best_bid_and_ask.bond.best_ask)
-             *. (Float.of_int xlf_proportions.bond
-                 /. Float.of_int xlf_total_securities)))
+      let ask_price =
+        Int.of_float
+          ((Float.of_int (fst t.best_bid_and_ask.wfc.best_ask)
+            *. (Float.of_int xlf_proportions.wfc
+                /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.gs.best_ask)
+               *. (Float.of_int xlf_proportions.gs
+                   /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.ms.best_ask)
+               *. (Float.of_int xlf_proportions.ms
+                   /. Float.of_int xlf_total_securities))
+           +. (Float.of_int (fst t.best_bid_and_ask.bond.best_ask)
+               *. (Float.of_int xlf_proportions.bond
+                   /. Float.of_int xlf_total_securities)))
+      in
+      print_s [%message (ask_price : int)];
+      ask_price
     | _ -> 0
   ;;
 
@@ -213,7 +245,7 @@ module State_manager = struct
     | VALBZ -> t.best_bid_and_ask.valbz.best_bid
     | BOND -> t.best_bid_and_ask.bond.best_bid
     | WFC -> t.best_bid_and_ask.wfc.best_bid
-    | XLF -> t.best_bid_and_ask.wfc.best_bid
+    | XLF -> t.best_bid_and_ask.xlf.best_bid
     | GS -> t.best_bid_and_ask.gs.best_bid
     | MS -> t.best_bid_and_ask.ms.best_bid
   ;;
@@ -224,7 +256,7 @@ module State_manager = struct
     | VALBZ -> t.best_bid_and_ask.valbz.best_ask
     | BOND -> t.best_bid_and_ask.bond.best_ask
     | WFC -> t.best_bid_and_ask.wfc.best_ask
-    | XLF -> t.best_bid_and_ask.wfc.best_ask
+    | XLF -> t.best_bid_and_ask.xlf.best_ask
     | GS -> t.best_bid_and_ask.gs.best_ask
     | MS -> t.best_bid_and_ask.ms.best_ask
   ;;
@@ -254,61 +286,72 @@ module State_manager = struct
       }
   ;;
 
-  let get_total_position t ~(trading : Tradeable.t) =
+  let get_total_position_buys t ~(trading : Tradeable.t) =
     match trading with
-    | BOND ->
-      t.positions.bond
-      + List.length t.open_orders.bond.buys
-      - List.length t.open_orders.bond.sells
-    | VALBZ ->
-      t.positions.valbz
-      + List.length t.open_orders.valbz.buys
-      - List.length t.open_orders.valbz.sells
-    | VALE ->
-      t.positions.vale
-      + List.length t.open_orders.vale.buys
-      - List.length t.open_orders.vale.sells
-    | XLF ->
-      t.positions.xlf
-      + List.length t.open_orders.xlf.buys
-      - List.length t.open_orders.xlf.sells
-    | WFC ->
-      t.positions.wfc
-      + List.length t.open_orders.wfc.buys
-      - List.length t.open_orders.wfc.sells
-    | MS ->
-      t.positions.ms
-      + List.length t.open_orders.ms.buys
-      - List.length t.open_orders.ms.sells
-    | GS ->
-      t.positions.gs
-      + List.length t.open_orders.gs.buys
-      - List.length t.open_orders.gs.sells
+    | BOND -> t.positions.bond + List.length t.open_orders.bond.buys
+    | VALBZ -> t.positions.valbz + List.length t.open_orders.valbz.buys
+    | VALE -> t.positions.vale + List.length t.open_orders.vale.buys
+    | XLF -> t.positions.xlf + List.length t.open_orders.xlf.buys
+    | WFC -> t.positions.wfc + List.length t.open_orders.wfc.buys
+    | MS -> t.positions.ms + List.length t.open_orders.ms.buys
+    | GS -> t.positions.gs + List.length t.open_orders.gs.buys
+  ;;
+
+  let get_total_position_sells t ~(trading : Tradeable.t) =
+    match trading with
+    | BOND -> t.positions.bond - List.length t.open_orders.bond.sells
+    | VALBZ -> t.positions.valbz - List.length t.open_orders.valbz.sells
+    | VALE -> t.positions.vale - List.length t.open_orders.vale.sells
+    | XLF -> t.positions.xlf - List.length t.open_orders.xlf.sells
+    | WFC -> t.positions.wfc - List.length t.open_orders.wfc.sells
+    | MS -> t.positions.ms - List.length t.open_orders.ms.sells
+    | GS -> t.positions.gs - List.length t.open_orders.gs.sells
   ;;
 
   let has_hit_pos_limit t (tradeable : Tradeable.t) =
     match tradeable with
     | VALE ->
-      let curr = get_total_position t ~trading:VALE in
-      curr > limits.vale || curr < -1 * limits.vale
+      let curr_1 = get_total_position_buys t ~trading:VALE in
+      let curr_2 = get_total_position_sells t ~trading:VALE in
+      (curr_1 > limits.vale || curr_1 < -1 * limits.vale)
+      || curr_2 > limits.vale
+      || curr_2 < -1 * limits.vale
     | VALBZ ->
-      let curr = get_total_position t ~trading:VALBZ in
-      curr > limits.valbz || curr < -1 * limits.valbz
+      let curr_1 = get_total_position_buys t ~trading:VALBZ in
+      let curr_2 = get_total_position_sells t ~trading:VALBZ in
+      (curr_1 > limits.valbz || curr_1 < -1 * limits.valbz)
+      || curr_2 > limits.valbz
+      || curr_2 < -1 * limits.valbz
     | BOND ->
-      let curr = get_total_position t ~trading:BOND in
-      curr > limits.bond || curr < -1 * limits.bond
+      let curr_1 = get_total_position_buys t ~trading:BOND in
+      let curr_2 = get_total_position_sells t ~trading:BOND in
+      (curr_1 > limits.bond || curr_1 < -1 * limits.bond)
+      || curr_2 > limits.bond
+      || curr_2 < -1 * limits.bond
     | XLF ->
-      let curr = get_total_position t ~trading:XLF in
-      curr > limits.xlf || curr < -1 * limits.xlf
+      let curr_1 = get_total_position_buys t ~trading:XLF in
+      let curr_2 = get_total_position_sells t ~trading:XLF in
+      (curr_1 > limits.xlf || curr_1 < -1 * limits.xlf)
+      || curr_2 > limits.xlf
+      || curr_2 < -1 * limits.xlf
     | GS ->
-      let curr = get_total_position t ~trading:GS in
-      curr > limits.gs || curr < -1 * limits.gs
+      let curr_1 = get_total_position_buys t ~trading:GS in
+      let curr_2 = get_total_position_sells t ~trading:GS in
+      (curr_1 > limits.gs || curr_1 < -1 * limits.gs)
+      || curr_2 > limits.gs
+      || curr_2 < -1 * limits.gs
     | MS ->
-      let curr = get_total_position t ~trading:MS in
-      curr > limits.ms || curr < -1 * limits.ms
+      let curr_1 = get_total_position_buys t ~trading:MS in
+      let curr_2 = get_total_position_sells t ~trading:MS in
+      (curr_1 > limits.ms || curr_1 < -1 * limits.ms)
+      || curr_2 > limits.ms
+      || curr_2 < -1 * limits.ms
     | WFC ->
-      let curr = get_total_position t ~trading:WFC in
-      curr > limits.wfc || curr < -1 * limits.wfc
+      let curr_1 = get_total_position_buys t ~trading:WFC in
+      let curr_2 = get_total_position_sells t ~trading:WFC in
+      (curr_1 > limits.wfc || curr_1 < -1 * limits.wfc)
+      || curr_2 > limits.wfc
+      || curr_2 < -1 * limits.wfc
   ;;
 
   let will_hit_pos_limit t ~(trading : Tradeable.t) ~new_tot_pos =
@@ -490,9 +533,17 @@ module State_manager = struct
        current positions and update open orders accordingly *)
     let buy_lst = List.init (Size.to_int size) ~f:Fn.id in
     List.iter buy_lst ~f:(fun _ ->
-      let curr_tot_pos = get_total_position t ~trading in
+      let curr_tot_pos_buys = get_total_position_buys t ~trading in
+      let curr_tot_pos_sells = get_total_position_sells t ~trading in
       match
-        will_hit_pos_limit t ~trading ~new_tot_pos:(curr_tot_pos + unit_size)
+        will_hit_pos_limit
+          t
+          ~trading
+          ~new_tot_pos:(curr_tot_pos_buys + unit_size)
+        || will_hit_pos_limit
+             t
+             ~trading
+             ~new_tot_pos:(curr_tot_pos_sells + unit_size)
       with
       | true -> ()
       | false -> execute_unit_buy t ~trading ~price)
@@ -508,12 +559,22 @@ module State_manager = struct
        current positions and update open orders accordingly *)
     let sell_lst = List.init (Size.to_int size) ~f:Fn.id in
     List.iter sell_lst ~f:(fun _ ->
-      let curr_tot_pos = get_total_position t ~trading in
+      let curr_tot_pos_buys = get_total_position_buys t ~trading in
+      let curr_tot_pos_sells = get_total_position_sells t ~trading in
       match
-        will_hit_pos_limit t ~trading ~new_tot_pos:(curr_tot_pos - unit_size)
+        will_hit_pos_limit
+          t
+          ~trading
+          ~new_tot_pos:(curr_tot_pos_buys - unit_size)
+        || will_hit_pos_limit
+             t
+             ~trading
+             ~new_tot_pos:(curr_tot_pos_sells - unit_size)
       with
       | true -> ()
-      | false -> execute_unit_sell t ~trading ~price)
+      | false ->
+        (* print_s [%message (curr_tot_pos : int)]; *)
+        execute_unit_sell t ~trading ~price)
   ;;
 
   let add_order_at_open t = ()
@@ -534,9 +595,7 @@ module State_manager = struct
            ~symbol:(tradable_to_symbol VALE)
            ~dir:Sell
            ~size:(Size.of_int_exn t.positions.vale)
-         |> don't_wait_for;
-         t.positions.valbz <- t.positions.vale + t.positions.valbz;
-         t.positions.vale <- 0
+         |> don't_wait_for
        | false ->
          Exchange_driver.convert
            t.exchange_driver
@@ -544,9 +603,7 @@ module State_manager = struct
            ~symbol:(tradable_to_symbol VALE)
            ~dir:Buy
            ~size:(Size.of_int_exn (-1 * t.positions.vale))
-         |> don't_wait_for;
-         t.positions.valbz <- t.positions.vale + t.positions.valbz;
-         t.positions.vale <- 0)
+         |> don't_wait_for)
     | XLF ->
       (match t.positions.xlf > 0 with
        | true ->
@@ -556,11 +613,7 @@ module State_manager = struct
            ~symbol:(tradable_to_symbol XLF)
            ~dir:Sell
            ~size:(Size.of_int_exn t.positions.xlf)
-         |> don't_wait_for;
-         t.positions.bond <- 0;
-         t.positions.gs <- 0;
-         t.positions.ms <- 0;
-         t.positions.wfc <- 0
+         |> don't_wait_for
        | false ->
          Exchange_driver.convert
            t.exchange_driver
@@ -568,11 +621,7 @@ module State_manager = struct
            ~symbol:(tradable_to_symbol XLF)
            ~dir:Buy
            ~size:(Size.of_int_exn (-1 * t.positions.xlf))
-         |> don't_wait_for;
-         t.positions.bond <- 0;
-         t.positions.gs <- 0;
-         t.positions.ms <- 0;
-         t.positions.wfc <- 0)
+         |> don't_wait_for)
     | _ -> ()
   ;;
 
@@ -657,7 +706,7 @@ module State_manager = struct
               ~price_end:(fst (get_best_ask t ~trading))))
   ;;
 
-  let remove_open_order t ~order_id =
+  let remove_open_orders t ~order_id =
     t.open_orders.vale.buys
     <- get_lst_without
          t.open_orders.vale.buys
@@ -730,16 +779,15 @@ module State_manager = struct
          ~without:order_id
   ;;
 
-  let cancel_order t ~order_id =
-    Exchange_driver.cancel t.exchange_driver ~order_id |> don't_wait_for;
-    remove_open_order t ~order_id
-  ;;
-
   let get_pos_diff_by_dir ~diff ~(dir : Dir.t) =
     match dir with Sell -> -1 * diff | Buy -> diff
   ;;
 
-  let update_positions_on_fill t ~(trading : Tradeable.t) ~(fill : Exchange_message.Fill.t) =
+  let update_positions_on_fill
+    t
+    ~(trading : Tradeable.t)
+    ~(fill : Exchange_message.Fill.t)
+    =
     let pos_diff =
       get_pos_diff_by_dir ~diff:(Size.to_int fill.size) ~dir:fill.dir
     in
@@ -775,50 +823,64 @@ module State_manager = struct
     match fill.dir with
     | Buy ->
       (* hedge sell securities *)
-      add_sell_order
-        t
-        ~trading:BOND
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_bid))
-        ~size:
-          (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
-      add_sell_order
-        t
-        ~trading:WFC
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_bid))
-        ~size:(Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
-      add_sell_order
-        t
-        ~trading:GS
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_bid))
-        ~size:(Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
-      add_sell_order
-        t
-        ~trading:MS
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_bid))
-        ~size:(Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size))
+      (match Int.equal t.xlf_shares_tracker.bought 10 with
+       | true ->
+         add_sell_order
+           t
+           ~trading:BOND
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_bid))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
+         add_sell_order
+           t
+           ~trading:WFC
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_bid))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
+         add_sell_order
+           t
+           ~trading:GS
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_bid))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
+         add_sell_order
+           t
+           ~trading:MS
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_bid))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size))
+       | false -> ());
+      t.xlf_shares_tracker.bought <- 0
     | Sell ->
       (* hedge buy securities *)
-      add_buy_order
-        t
-        ~trading:BOND
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_ask))
-        ~size:
-          (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
-      add_buy_order
-        t
-        ~trading:WFC
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_ask))
-        ~size:(Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
-      add_buy_order
-        t
-        ~trading:GS
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_ask))
-        ~size:(Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
-      add_buy_order
-        t
-        ~trading:MS
-        ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_bid))
-        ~size:(Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size))
+      (match Int.equal t.xlf_shares_tracker.sells 10 with
+       | true ->
+         add_buy_order
+           t
+           ~trading:BOND
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.bond.best_ask))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.bond * Size.to_int fill.size));
+         add_buy_order
+           t
+           ~trading:WFC
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.wfc.best_ask))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.wfc * Size.to_int fill.size));
+         add_buy_order
+           t
+           ~trading:GS
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.gs.best_ask))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.gs * Size.to_int fill.size));
+         add_buy_order
+           t
+           ~trading:MS
+           ~price:(Price.of_int_exn (fst t.best_bid_and_ask.ms.best_ask))
+           ~size:
+             (Size.of_int_exn (xlf_proportions.ms * Size.to_int fill.size));
+         t.xlf_shares_tracker.sells <- 0
+       | false -> ())
   ;;
 
   let refill_bond_requests_on_fill t (fill : Exchange_message.Fill.t) =
@@ -829,13 +891,24 @@ module State_manager = struct
   ;;
 
   let handle_fill t (fill : Exchange_message.Fill.t) =
-    remove_open_order t ~order_id:fill.order_id;
-    update_positions_on_fill t ~trading:(symbol_to_tradable fill.symbol) ~fill;
+    remove_open_orders t ~order_id:fill.order_id;
+    update_positions_on_fill
+      t
+      ~trading:(symbol_to_tradable fill.symbol)
+      ~fill;
     (* custom logic for bonds (re-filling requests) and vale (hedging through
        valbz) *)
     match symbol_to_tradable fill.symbol with
     | VALE -> hedge_vale_on_fill t fill
-    | XLF -> hedge_xlf_on_fill t fill
+    | XLF ->
+      (match fill.dir with
+       | Buy ->
+         t.xlf_shares_tracker.bought
+         <- t.xlf_shares_tracker.bought + Size.to_int fill.size
+       | Sell ->
+         t.xlf_shares_tracker.sells
+         <- t.xlf_shares_tracker.sells + Size.to_int fill.size);
+      hedge_xlf_on_fill t fill
     | _ -> ()
   ;;
 
@@ -854,6 +927,65 @@ module State_manager = struct
     | WFC -> t.best_bid_and_ask.wfc <- top_bid_and_ask
     | MS -> t.best_bid_and_ask.ms <- top_bid_and_ask
     | GS -> t.best_bid_and_ask.gs <- top_bid_and_ask
+  ;;
+
+  let get_trade_of_order_id t ~order_id =
+    (match
+       List.mem t.open_orders.vale.buys order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED vale buy order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.vale.sells order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED vale sell order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.valbz.buys order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED valbz buy order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.valbz.sells order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED valbz sell order"
+     | false -> ());
+    (match List.mem t.open_orders.gs.buys order_id ~equal:Order_id.equal with
+     | true -> print_endline "REJECTED gs buy order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.gs.sells order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED gs sell order"
+     | false -> ());
+    (match List.mem t.open_orders.ms.buys order_id ~equal:Order_id.equal with
+     | true -> print_endline "REJECTED ms buy order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.ms.sells order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED ms sell order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.wfc.buys order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED wfc buy order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.wfc.sells order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED wfc sell order"
+     | false -> ());
+    (match
+       List.mem t.open_orders.xlf.buys order_id ~equal:Order_id.equal
+     with
+     | true -> print_endline "REJECTED xlf buy order"
+     | false -> ());
+    match
+      List.mem t.open_orders.xlf.sells order_id ~equal:Order_id.equal
+    with
+    | true -> print_endline "REJECTED xlf sell order"
+    | false -> ()
   ;;
 end
 
@@ -896,6 +1028,7 @@ let run exchange_type =
             ; ms = { best_bid = 0, 0; best_ask = 0, 0 }
             ; wfc = { best_bid = 0, 0; best_ask = 0, 0 }
             }
+        ; xlf_shares_tracker = { bought = 0; sells = 0 }
         }
       in
       let read_messages_and_do_some_stuff () =
@@ -908,14 +1041,52 @@ let run exchange_type =
               my_positions
           | Reject rej ->
             printf !"%{sexp: Exchange_message.t}\n%!" message;
-            State_manager.cancel_order state_manager ~order_id:rej.order_id
+            State_manager.get_trade_of_order_id
+              state_manager
+              ~order_id:rej.order_id;
+            State_manager.remove_open_orders
+              state_manager
+              ~order_id:rej.order_id
+            (* print_endline (Printf.sprintf "OPEN ORDERS --> VALE: %i and
+               VALBZ: %i\n" (State_manager.get_num_of_open_buy_orders
+               state_manager ~trading:VALE)
+               (State_manager.get_num_of_open_buy_orders state_manager
+               ~trading:VALBZ)); print_endline (Printf.sprintf "SELL ORDERS
+               --> VALE: %i and VALBZ: %i\n"
+               (State_manager.get_num_of_open_sell_orders state_manager
+               ~trading:VALE) (State_manager.get_num_of_open_sell_orders
+               state_manager ~trading:VALBZ)); print_endline (Printf.sprintf
+               "POS --> VALE: %i and VALBZ: %i\n"
+               (state_manager.positions.vale)
+               (state_manager.positions.valbz)); *)
+            (* print_endline (Printf.sprintf "OPEN ORDERS --> VALE: %i and
+               VALBZ: %i" (State_manager. state_manager ~trading:VALE)
+               (State_manager.get_total_position state_manager
+               ~trading:VALBZ)); *)
           | Fill fill ->
+            (* print_endline (Printf.sprintf "OPEN ORDERS --> VALE: %i and
+               VALBZ: %i\n" (State_manager.get_num_of_open_buy_orders
+               state_manager ~trading:VALE)
+               (State_manager.get_num_of_open_buy_orders state_manager
+               ~trading:VALBZ)); print_endline (Printf.sprintf "SELL ORDERS
+               --> VALE: %i and VALBZ: %i\n"
+               (State_manager.get_num_of_open_sell_orders state_manager
+               ~trading:VALE) (State_manager.get_num_of_open_sell_orders
+               state_manager ~trading:VALBZ)); print_endline (Printf.sprintf
+               "POS --> VALE: %i and VALBZ: %i\n"
+               (state_manager.positions.vale)
+               (state_manager.positions.valbz)); *)
             printf !"%{sexp: Exchange_message.t}\n%!" message;
             State_manager.handle_fill state_manager fill
           | Book book ->
             let bids, asks = book.book.buy, book.book.sell in
             (match symbol_to_tradable book.symbol with
-             | BOND -> ()
+             | BOND ->
+               State_manager.update_best_bid_and_ask_prices
+                 state_manager
+                 ~trading:BOND
+                 ~bids
+                 ~asks
              | VALBZ ->
                State_manager.update_best_bid_and_ask_prices
                  state_manager
