@@ -1,0 +1,4461 @@
+(Hello ((BOND 0) (GS 0) (MS 0) (USD 0) (VALBZ 0) (VALE 0) (WFC 0) (XLF 0)))
+(Open (BOND GS MS VALBZ VALE WFC XLF))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 4) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 1) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4235 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 0) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 0) (xlf 0) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 14) (4202 5))) (sell ((4204 13) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5602 9) (5601 10) (5600 1))) (sell ((5604 3) (5605 5) (5606 2)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4292 1)))
+    (sell
+     ((4307 1) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 0) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 1) (xlf 0) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 10) (3998 3) (3997 3) (3996 7) (3995 1)))
+    (sell ((4001 4) (4002 9) (4003 1)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 14) (997 2))) (sell ((1000 7) (1001 18) (1002 7)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 8) (8400 2) (8399 1)))
+    (sell ((8406 5) (8407 5) (8408 7) (8409 2)))))))
+(Ack 1)
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 4) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 2) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4235 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 0) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 1) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 2))
+(Ack 2)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 0) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 1) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 2) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 3) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 4) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 5) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 6) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 1) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 2) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 3) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 4) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 5) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 3)
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 4) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 4) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4235 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 3) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 4))
+(Ack 4)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 7) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 8) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 9) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 10) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 11) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 12) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 6) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 7) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 8) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 9) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 10) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 5)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4294 1) (4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 13) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 14) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 15) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 16) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 17) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 11) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 12) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 13) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 14) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 15) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 6)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4295 1) (4294 1) (4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 18) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 16) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 19) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 16) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 20) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 16) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 21) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 16) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 16) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 17) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 18) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 19) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 20) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 7)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4296 1) (4295 1) (4294 1) (4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 22) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 21) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 23) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 21) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 24) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 21) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 21) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 22) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 23) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 24) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 25) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 8)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 1) (4296 1) (4295 1) (4294 1) (4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 25) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 26) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 26) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 26) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 27) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 28) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 29) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 30) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 9)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1) (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 31) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 31) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 32) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 33) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 34) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 35) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 10)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) (4321 2) 
+      (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 36) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 37) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 38) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 39) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 40) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 11)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4307 2) (4309 2) (4310 2) (4313 1) (4316 2) (4320 1) 
+      (4321 2) (4322 2) (4323 2) (4324 4) (4325 1) (4326 1) (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 41) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 12)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4307 2) (4309 2) (4310 2) (4313 1) (4316 2) 
+      (4320 1) (4321 2) (4322 2) (4323 2) (4324 4) (4325 1) (4326 1)
+      (4335 3)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 42) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 13)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4307 2) (4309 2) (4310 2) (4313 1) 
+      (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4) (4325 1)
+      (4326 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 43) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 14)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 2) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 44) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 15)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 1) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 45) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 16)
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 4) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 8) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4235 3)))))))
+(Ack 17)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 1) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 46) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 18)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 1) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 47) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 19)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 1) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 48) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 20)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 1) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 49) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 21)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 1) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 50) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 22)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 1) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 51) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 23)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 1) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 52) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 24)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 1) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 53) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 25)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 1) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 54) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 26)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 3) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 55) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 27)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 2) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 56) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 28)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 2) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 57) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 29)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 2) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 58) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 30)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 2) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 59) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 31)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 60) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 32)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 2) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 61) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 33)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 2) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 62) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 34)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 2) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 63) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 35)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 2) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 64) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 36)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 4) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 65) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 37)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 3) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 66) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 38)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 3) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 67) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 39)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 3) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 68) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 40)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 3) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 69) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 41)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 3) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 70) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 42)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 3) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 71) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 43)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 3) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 72) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 44)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 3) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 73) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 45)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 4) (4307 5) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 74) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 46)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 4) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 75) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 47)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 4) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 76) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 48)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 4) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 77) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 49)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 4) (4304 4) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 78) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 50)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 4) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 79) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 51)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 4) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 80) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 52)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 5) (4306 4) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 81) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 53)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 5) (4306 5) (4307 6) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 82) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 54)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 5) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 5) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 83) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 55)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 5) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 84) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 56)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 5) (4304 5) (4305 5) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 85) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 57)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 5) (4305 5) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 86) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 58)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 6) (4305 5) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 87) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 59)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 6) (4305 6) (4306 5) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 88) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 60)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 6) (4305 6) (4306 6) (4307 7) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 89) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 61)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 6) (4305 6) (4306 6) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 90) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 62)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 6) (4304 6) (4305 6) (4306 6) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 91) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 63)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 7) (4304 6) (4305 6) (4306 6) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 92) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 64)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 7) (4304 7) (4305 6) (4306 6) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 93) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 65)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 7) (4304 7) (4305 7) (4306 6) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 94) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 66)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 7) (4304 7) (4305 7) (4306 7) (4307 8) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 95) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 67)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 7) (4304 7) (4305 7) (4306 7) (4307 9) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 96) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 68)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 8) (4304 7) (4305 7) (4306 7) (4307 9) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 97) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 69)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 8) (4304 8) (4305 7) (4306 7) (4307 9) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 98) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 70)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 8) (4304 8) (4305 8) (4306 7) (4307 9) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 99) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 71)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 8) (4304 8) (4305 8) (4306 8) (4307 9) (4309 2) (4310 2) 
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 72)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 8) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 73)
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 5))) (sell ((4204 13) (4205 6)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 9) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 74)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 10) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 75)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 11) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 76)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 12) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 77)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 13) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 78)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 14) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 79)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 15) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 80)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 16) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 81)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 17) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 82)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 18) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 83)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 19) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 84)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 20) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 85)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 21) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 86)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 22) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 87)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 23) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 88)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 24) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 89)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 25) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 90)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 26) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 91)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 27) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 92)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 28) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 93)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 29) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 94)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 30) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 95)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 31) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 96)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 32) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 97)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 33) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 98)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 34) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 99)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 35) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 100)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 36) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Ack 101)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 7) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 37) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Reject ((order_id 102) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 103) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 104) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 105) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 106) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 107) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 108) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 109) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 110) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 111) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 112) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5602 9) (5601 10) (5600 1))) (sell ((5604 4) (5605 5) (5606 2)))))))
+(Reject ((order_id 113) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 114) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 115) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 116) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 117) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 118) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 119) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 120) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 121) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 122) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 123) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 124) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 125) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 126) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 127) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 128) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 129) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 130) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 131) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5602 9) (5601 10) (5600 1))) (sell ((5604 3) (5605 5) (5606 2)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 14) (997 2))) (sell ((1000 7) (1001 18) (1002 6)))))))
+(Trade ((symbol GS) (price 8402) (size 1)))
+(Trade ((symbol GS) (price 8402) (size 2)))
+(Trade ((symbol GS) (price 8402) (size 4)))
+(Trade ((symbol GS) (price 8402) (size 1)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1))) (sell ((8406 5) (8407 5) (8408 7) (8409 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 3))) (sell ((4204 13) (4205 6)))))))
+(Fill ((order_id 10) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz 0) (vale 7) (xlf 100) (gs 0) (ms 0) (wfc 0)))))
+(Out 10)
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 37) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 99) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Trade ((symbol WFC) (price 5602) (size 4)))
+(Trade ((symbol WFC) (price 5602) (size 1)))
+(Trade ((symbol WFC) (price 5602) (size 4)))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 3) (5605 5) (5606 2)))))))
+(Ack 132)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 6) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 38) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 100) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 133) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 3))) (sell ((4204 12) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 10) (3998 3) (3997 3) (3996 7) (3995 1)))
+    (sell ((4001 4) (4002 9) (4003 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 3))) (sell ((4204 14) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 5) (5605 5) (5606 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 6) (3998 3) (3997 3) (3996 7) (3995 1)))
+    (sell ((4001 4) (4002 9) (4003 3)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8400 2) (8399 1))) (sell ((8407 5) (8408 7) (8409 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 6) (3998 3) (3997 3) (3996 7) (3995 1)))
+    (sell ((4001 4) (4002 9) (4003 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 3))) (sell ((4204 11) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8400 1) (8399 1))) (sell ((8407 5) (8408 7) (8409 2)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 5) (5605 5)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 6) (3998 3) (3997 3) (3996 7) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 6) (3998 3) (3997 3) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 5) (5605 4)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 6) (5605 4)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 14) (997 2))) (sell ((1000 7) (1001 18) (1002 5)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 3) (3997 3) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 1))) (sell ((4204 11) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 5) (3997 3) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Trade ((symbol BOND) (price 998) (size 1)))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 13) (997 2))) (sell ((1000 7) (1001 18) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 1))) (sell ((4204 5) (4205 6)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 1))) (sell ((4204 6) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8400 1) (8399 1))) (sell ((8407 5) (8408 1) (8409 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 8) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4235 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4203 13) (4202 1))) (sell ((4204 8) (4205 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 8) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4233 3) (4235 3)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 6) (5605 3)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 13) (997 2))) (sell ((1000 7) (1001 14) (1002 5)))))))
+(Trade ((symbol VALBZ) (price 4203) (size 2)))
+(Trade ((symbol VALBZ) (price 4203) (size 4)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 3)))
+(Trade ((symbol VALBZ) (price 4203) (size 2)))
+(Book ((symbol VALBZ) (book ((buy ((4202 1))) (sell ((4204 8) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 1) (8399 1))) (sell ((8405 2) (8407 5) (8408 1) (8409 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 5) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4) (3995 1)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8400 1) (8399 1))) (sell ((8405 2) (8407 5) (8408 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 4) (4002 14) (4003 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 1) (8399 1) (8398 1))) (sell ((8405 2) (8407 5) (8408 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 4) (4002 12) (4003 4)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 13) (997 2))) (sell ((1000 9) (1001 14) (1002 5)))))))
+(Trade ((symbol VALE) (price 4218) (size 1)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 7) (4220 1) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4233 3) (4235 3)))))))
+(Trade ((symbol GS) (price 8405) (size 1)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 1) (8399 1) (8398 1))) (sell ((8405 1) (8407 5) (8408 1)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 7) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 3)))
+    (sell ((4001 4) (4002 12) (4003 4)))))))
+(Book ((symbol VALBZ) (book ((buy ((4202 5))) (sell ((4204 8) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 4) (4002 12) (4003 4)))))))
+(Book ((symbol VALBZ) (book ((buy ((4202 6))) (sell ((4204 8) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 8) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 4) (4002 9) (4003 4)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 6) (5605 1)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 1))) (sell ((5604 6) (5605 2)))))))
+(Trade ((symbol MS) (price 3999) (size 1)))
+(Trade ((symbol MS) (price 3999) (size 3)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 4) (4002 9) (4003 4)))))))
+(Fill ((order_id 1) (symbol VALE) (dir Sell) (price 4218) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 0) (vale 0) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz 0) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 0) (vale -1) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Out 1)
+(Fill ((order_id 3) (symbol VALE) (dir Sell) (price 4218) (size 2)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 1) (vale -1) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz 0) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 1) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz 0) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 2))
+(Out 3)
+(Trade ((symbol VALE) (price 4218) (size 1)))
+(Trade ((symbol VALE) (price 4218) (size 2)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 4) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Ack 134)
+(Fill ((order_id 134) (symbol VALBZ) (dir Buy) (price 4204) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz 0) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+(Out 134)
+(Trade ((symbol VALBZ) (price 4204) (size 1)))
+(Book ((symbol VALBZ) (book ((buy ((4202 6))) (sell ((4204 7) (4205 6)))))))
+(Ack 135)
+(Fill ((order_id 135) (symbol VALBZ) (dir Buy) (price 4204) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -1) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+(Fill ((order_id 135) (symbol VALBZ) (dir Buy) (price 4204) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -2) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+(Out 135)
+(Trade ((symbol VALBZ) (price 4204) (size 1)))
+(Trade ((symbol VALBZ) (price 4204) (size 1)))
+(Book ((symbol VALBZ) (book ((buy ((4202 6))) (sell ((4204 5) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 3) (3996 4)))
+    (sell ((4001 8) (4002 9) (4003 4)))))))
+(Book ((symbol VALBZ) (book ((buy ((4202 6))) (sell ((4204 11) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 8) (4002 9) (4003 4)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 2))) (sell ((5604 6) (5605 2)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 13) (997 2))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Fill ((order_id 22) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -3) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+(Out 22)
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 38) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -3) (vale 7) (xlf 100) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 136)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -3) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 137)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4320 1) (4321 2) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Book ((symbol VALBZ) (book ((buy ((4202 7))) (sell ((4204 11) (4205 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 5) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 8) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Trade ((symbol MS) (price 4001) (size 2)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 6) (4002 9) (4003 4)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 10) (5600 2))) (sell ((5602 3) (5604 6) (5605 2)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 9) (5600 2))) (sell ((5602 3) (5604 6) (5605 2)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 1) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 1) (8407 5) (8408 1)))))))
+(Trade ((symbol VALE) (price 4205) (size 2)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 3) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 8) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 11))) (sell ((4204 11) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 1) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 5) (8408 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 6) (4002 7) (4003 4)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 11))) (sell ((4204 12) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5601 9) (5600 2))) (sell ((5602 6) (5604 6) (5605 2)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 12) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 4) (4002 7) (4003 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 5) (8408 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 1) (8400 2) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 5) (8408 1)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 14) (4205 6)))))))
+(Book
+ ((symbol BOND)
+  (book
+   ((buy ((999 2) (998 13) (997 2))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 9) (5600 2) (5599 2))) (sell ((5602 6) (5604 6) (5605 2)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 15) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 9) (5600 2) (5599 2))) (sell ((5602 8) (5604 6) (5605 2)))))))
+(Trade ((symbol GS) (price 8401) (size 1)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1) (8398 1) (8397 5)))
+    (sell ((8401 5) (8405 4) (8407 5) (8408 1)))))))
+(Trade ((symbol MS) (price 4001) (size 2)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 2) (4002 7) (4003 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 5) (8408 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 7) (5600 2) (5599 2))) (sell ((5602 8) (5604 6) (5605 2)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 17) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1) (8398 1) (8397 5))) (sell ((8405 4) (8408 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 7) (5600 2) (5599 3))) (sell ((5602 8) (5604 6) (5605 2)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 20) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4001 2) (4002 2) (4003 4)))))))
+(Fill ((order_id 16) (symbol VALE) (dir Sell) (price 4218) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 2) (vale -3) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -3) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 2) (vale -4) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -3) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Trade ((symbol VALE) (price 4218) (size 1)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 3) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 7) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Ack 138)
+(Fill ((order_id 138) (symbol VALBZ) (dir Buy) (price 4204) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -3) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+(Out 138)
+(Trade ((symbol VALBZ) (price 4204) (size 1)))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 13))) (sell ((4204 19) (4205 6)))))))
+(Ack 139)
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 2) (5599 3))) (sell ((5602 8) (5604 6) (5605 2)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 1) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 1) (8408 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 4) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 1) (8408 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3999 4) (3998 4) (3997 2) (3996 4)))
+    (sell ((4000 1) (4001 2) (4002 2) (4003 4)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 14))) (sell ((4204 19) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 2) (5599 3))) (sell ((5602 8) (5604 5) (5605 2)))))))
+(Trade ((symbol MS) (price 3999) (size 2)))
+(Trade ((symbol MS) (price 3999) (size 2)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 4)))
+    (sell ((4000 1) (4001 2) (4002 2) (4003 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 3) (5599 3))) (sell ((5602 8) (5604 5) (5605 2)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4321 2) (4322 2) (4323 2) (4324 4) (4325 1)
+      (4326 1)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4321 8) (4322 2) (4323 2) (4324 4) (4325 1)
+      (4326 1)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 17))) (sell ((4204 19) (4205 6)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 17))) (sell ((4204 25) (4205 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 4) (8398 1) (8397 5)))
+    (sell ((8405 4) (8407 5) (8408 1)))))))
+(Trade ((symbol BOND) (price 999) (size 2)))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 13) (997 2))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4321 8) (4322 2) (4323 2) (4324 4) (4325 1)
+      (4326 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 4)))
+    (sell ((4000 1) (4001 2) (4002 2) (4003 3)))))))
+(Fill ((order_id 11) (symbol XLF) (dir Sell) (price 4303) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+(Out 11)
+(Trade ((symbol XLF) (price 4303) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4321 8) (4322 2) (4323 2) (4324 4) (4325 1)
+      (4326 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 4) (8398 1) (8397 5)))
+    (sell ((8405 5) (8407 5) (8408 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 3) (5599 3))) (sell ((5602 10) (5604 5) (5605 2)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 2) (8400 2) (8399 4) (8398 1) (8397 5)))
+    (sell ((8405 5) (8407 5) (8408 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 3) (5599 3)))
+    (sell ((5602 10) (5603 1) (5604 5) (5605 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 4) (3995 1)))
+    (sell ((4000 1) (4001 2) (4002 2) (4003 3)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 17))) (sell ((4204 30) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 4) (3995 1)))
+    (sell ((4000 1) (4001 3) (4002 2) (4003 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 3) (3995 1)))
+    (sell ((4000 1) (4001 3) (4002 2) (4003 3)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 5) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 18))) (sell ((4204 30) (4205 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 3) (5599 3)))
+    (sell ((5602 10) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 3) (3995 1)))
+    (sell ((4000 1) (4001 3) (4003 3)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 2) (8400 2) (8399 5) (8398 1) (8397 5)))
+    (sell ((8405 5) (8407 5) (8408 1)))))))
+(Trade ((symbol VALBZ) (price 4202) (size 1)))
+(Trade ((symbol VALBZ) (price 4202) (size 4)))
+(Trade ((symbol VALBZ) (price 4202) (size 1)))
+(Trade ((symbol VALBZ) (price 4202) (size 1)))
+(Trade ((symbol VALBZ) (price 4202) (size 4)))
+(Trade ((symbol VALBZ) (price 4202) (size 2)))
+(Trade ((symbol VALBZ) (price 4202) (size 1)))
+(Trade ((symbol VALBZ) (price 4202) (size 3)))
+(Trade ((symbol VALBZ) (price 4202) (size 1)))
+(Book ((symbol VALBZ) (book ((buy ()) (sell ((4204 30) (4205 6)))))))
+(Book ((symbol VALBZ) (book ((buy ((4200 3))) (sell ((4204 30) (4205 6)))))))
+(Trade ((symbol MS) (price 4000) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 3) (3995 1))) (sell ((4001 3) (4003 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 4) (3997 2) (3996 3) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 3) (5599 3)))
+    (sell ((5602 7) (5603 3) (5604 5) (5605 2)))))))
+(Fill ((order_id 32) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+(Out 32)
+(Fill ((order_id 41) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+(Out 41)
+(Fill ((order_id 49) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 100) (gs 0) (ms 0) (wfc 0)))))
+(Out 49)
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2) (4310 2)
+      (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2) (4324 4)
+      (4325 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 99) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 100) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 140)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 1) (4303 39) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 101) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 141)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 1) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 142)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 2) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 103) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 143)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 3) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+(Ack 144)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 4) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 2) (8400 2) (8399 5) (8398 1) (8397 5)))
+    (sell ((8405 6) (8407 5) (8408 1)))))))
+(Trade ((symbol GS) (price 8401) (size 2)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 2) (8399 5) (8398 1) (8397 5)))
+    (sell ((8405 6) (8407 5) (8408 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 6) (3997 2) (3996 3) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 7) (3997 2) (3996 3) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 1) (4200 3))) (sell ((4204 30) (4205 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 7) (3997 2) (3996 1) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Fill ((order_id 140) (symbol XLF) (dir Sell) (price 4302) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 104) (gs 0) (ms 0) (wfc 0)))))
+(Out 140)
+(Trade ((symbol XLF) (price 4302) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy
+     ((4299 2) (4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1)
+      (4292 1)))
+    (sell
+     ((4302 3) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+(Fill ((order_id 56) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 104) (gs 0) (ms 0) (wfc 0)))))
+(Out 56)
+(Fill ((order_id 62) (symbol XLF) (dir Buy) (price 4299) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 103) (gs 0) (ms 0) (wfc 0)))))
+(Out 62)
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Trade ((symbol XLF) (price 4299) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 3) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 145)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 4) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 103) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 146)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 5) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 104) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 147)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 6) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 2) (4323 2)
+      (4324 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 7) (3997 2) (3996 2) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 4) (5599 3)))
+    (sell ((5602 7) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 6) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 6) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 8) (3997 2) (3996 2) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 3) (8399 5) (8398 1) (8397 5)))
+    (sell ((8405 6) (8407 5) (8408 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 4) (5599 3)))
+    (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 7) (3997 2) (3996 2) (3995 1))) (sell ((4001 6) (4003 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 7) (3997 2) (3996 2) (3995 1))) (sell ((4001 13) (4003 3)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 8) (8399 5) (8398 1) (8397 5)))
+    (sell ((8405 6) (8407 5) (8408 1)))))))
+(Trade ((symbol MS) (price 3998) (size 1)))
+(Trade ((symbol MS) (price 3998) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 2) (3995 1))) (sell ((4001 13) (4003 3)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 11) (997 2))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 6) (5599 3)))
+    (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Fill ((order_id 9) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 105) (gs 0) (ms 0) (wfc 0)))))
+(Out 9)
+(Fill ((order_id 21) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 104) (gs 0) (ms 0) (wfc 0)))))
+(Out 21)
+(Fill ((order_id 31) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 103) (gs 0) (ms 0) (wfc 0)))))
+(Out 31)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 3) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 6) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 102) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 2) (3995 1)))
+    (sell ((4001 13) (4002 3) (4003 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 2) (4200 3))) (sell ((4204 30) (4205 6)))))))
+(Ack 148)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 3) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 7) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 103) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 149)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 3) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 8) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 104) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 150)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 3) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 105) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 151) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 11) (997 2))) (sell ((1000 5) (1001 14) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 5) (4200 3))) (sell ((4204 30) (4205 6)))))))
+(Fill ((order_id 16) (symbol VALE) (dir Sell) (price 4218) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 3) (vale -4) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 3) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Trade ((symbol VALE) (price 4218) (size 1)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4205 3) (4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Reject ((order_id 152) (error LIMIT:OPEN_ORDERS)))
+REJECTED valbz buy order
+(Reject ((order_id 153) (error LIMIT:OPEN_ORDERS)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 8) (8399 5) (8398 1) (8397 5))) (sell ((8405 6) (8407 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 5) (5599 3)))
+    (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Fill ((order_id 40) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+(Out 40)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 2) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 105) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 154)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 2) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 10) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 155) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 7) (997 2))) (sell ((1000 5) (1001 14) (1002 5)))))))
+(Fill ((order_id 48) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+(Out 48)
+(Fill ((order_id 55) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+(Out 55)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 10) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 26) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 105) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 105) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 8) (5599 3)))
+    (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Ack 156)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 10) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 106) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 157)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 11) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 158) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 159) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8400 8) (8399 4) (8398 1) (8397 5))) (sell ((8405 6) (8407 5)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 2) (3995 1)))
+    (sell ((4000 1) (4001 13) (4002 3) (4003 3)))))))
+(Trade ((symbol GS) (price 8400) (size 1)))
+(Trade ((symbol GS) (price 8400) (size 1)))
+(Trade ((symbol GS) (price 8400) (size 1)))
+(Trade ((symbol GS) (price 8400) (size 5)))
+(Book
+ ((symbol GS)
+  (book ((buy ((8399 4) (8398 1) (8397 5))) (sell ((8405 6) (8407 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5601 6) (5600 7) (5599 3)))
+    (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 5) (4200 3))) (sell ((4204 30) (4205 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 5) (4200 3))) (sell ((4203 1) (4204 30) (4205 4)))))))
+(Fill ((order_id 156) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+(Out 156)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 11) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 160)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 11) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 161) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 162) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Trade ((symbol WFC) (price 5601) (size 4)))
+(Trade ((symbol WFC) (price 5601) (size 2)))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5600 7) (5599 3))) (sell ((5602 9) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 5) (4200 3))) (sell ((4203 1) (4204 30) (4205 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5600 7) (5599 3))) (sell ((5602 10) (5603 3) (5604 5) (5605 2)))))))
+(Book
+ ((symbol GS) (book ((buy ((8399 4) (8398 1))) (sell ((8405 6) (8407 5)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 9) (997 2))) (sell ((1000 5) (1001 14) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 6) (4200 3))) (sell ((4203 1) (4204 30) (4205 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5600 7) (5599 3))) (sell ((5602 10) (5603 3) (5604 4) (5605 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5600 7) (5599 1))) (sell ((5602 10) (5603 3) (5604 4) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 6) (4200 3))) (sell ((4203 1) (4204 24) (4205 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 6) (4200 3))) (sell ((4203 1) (4204 23) (4205 2)))))))
+(Trade ((symbol VALE) (price 4205) (size 2)))
+(Trade ((symbol VALE) (price 4205) (size 1)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 3) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4205 1) (4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4233 3) (4235 3)))))))
+(Book
+ ((symbol GS) (book ((buy ((8399 4) (8398 1))) (sell ((8405 7) (8407 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5600 7) (5599 1))) (sell ((5602 10) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 11) (4200 3))) (sell ((4203 1) (4204 23) (4205 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 2) (3995 1)))
+    (sell ((4000 1) (4001 10) (4002 3) (4003 3)))))))
+(Trade ((symbol WFC) (price 5600) (size 1)))
+(Trade ((symbol WFC) (price 5600) (size 1)))
+(Trade ((symbol WFC) (price 5600) (size 2)))
+(Trade ((symbol WFC) (price 5600) (size 3)))
+(Book
+ ((symbol WFC)
+  (book ((buy ((5599 1))) (sell ((5602 10) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 12) (4200 3))) (sell ((4203 1) (4204 23) (4205 2)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4205 1) (4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) 
+      (4231 1) (4233 3) (4235 3)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4199 1) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 12) (4200 3))) (sell ((4203 5) (4204 23) (4205 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 3) (3995 1)))
+    (sell ((4000 1) (4001 10) (4002 3) (4003 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3998 5) (3997 2) (3996 3) (3995 1)))
+    (sell ((3999 3) (4000 1) (4001 10) (4002 3) (4003 3)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 9) (997 2))) (sell ((1000 3) (1001 14) (1002 5)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8401 1) (8399 4) (8398 1))) (sell ((8405 7) (8407 5)))))))
+(Fill ((order_id 160) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 109) (gs 0) (ms 0) (wfc 0)))))
+(Out 160)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 11) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 163)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 11) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 109) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 164) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 165) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 13) (4200 3))) (sell ((4203 5) (4204 23) (4205 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 1))) (sell ((5601 1) (5602 10) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 13) (4200 3))) (sell ((4203 6) (4204 23) (4205 2)))))))
+(Trade ((symbol MS) (price 3998) (size 1)))
+(Trade ((symbol MS) (price 3998) (size 2)))
+(Trade ((symbol MS) (price 3998) (size 1)))
+(Trade ((symbol MS) (price 3998) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 3) (4000 1) (4001 10) (4002 3) (4003 3)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 9) (997 2))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 1) (5598 1)))
+    (sell ((5601 1) (5602 10) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 13) (4200 3))) (sell ((4203 7) (4204 23) (4205 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 1))) (sell ((5601 1) (5602 10) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 1))) (sell ((5601 1) (5602 7) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 9) (997 3))) (sell ((1000 4) (1001 14) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 13) (4200 3))) (sell ((4203 7) (4204 23)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 13) (4200 3))) (sell ((4203 7) (4204 22)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4201 15) (4200 3))) (sell ((4203 7) (4204 22)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 2) (4201 15) (4200 3))) (sell ((4203 7) (4204 22)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 2) (4201 17) (4200 3))) (sell ((4203 7) (4204 22)))))))
+(Book
+ ((symbol GS)
+  (book ((buy ((8401 2) (8399 4) (8398 1))) (sell ((8405 7) (8407 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 1) (5602 7) (5603 4) (5604 4) (5605 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 1) (5602 7) (5603 4) (5604 3) (5605 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 3) (4000 1) (4001 10) (4002 3) (4003 1)))))))
+(Fill ((order_id 142) (symbol XLF) (dir Sell) (price 4302) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 110) (gs 0) (ms 0) (wfc 0)))))
+(Out 142)
+(Fill ((order_id 143) (symbol XLF) (dir Sell) (price 4302) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 110) (gs 0) (ms 0) (wfc 0)))))
+(Out 143)
+(Trade ((symbol XLF) (price 4302) (size 1)))
+(Trade ((symbol XLF) (price 4302) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10) (4309 2)
+      (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1) (4323 2)
+      (4324 4)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 110) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 5) (5602 7) (5603 4) (5604 3) (5605 2)))))))
+(Ack 166)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 5) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 1) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 5) (5602 7) (5603 2) (5604 3) (5605 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 3) (4000 2) (4001 10) (4002 3) (4003 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 3) (4000 2) (4001 13) (4002 3) (4003 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 4) (4000 2) (4001 13) (4002 3) (4003 1)))))))
+(Fill ((order_id 163) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 111) (gs 0) (ms 0) (wfc 0)))))
+(Out 163)
+(Fill ((order_id 8) (symbol XLF) (dir Buy) (price 4297) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 110) (gs 0) (ms 0) (wfc 0)))))
+(Out 8)
+(Fill ((order_id 20) (symbol XLF) (dir Buy) (price 4297) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 109) (gs 0) (ms 0) (wfc 0)))))
+(Out 20)
+(Fill ((order_id 30) (symbol XLF) (dir Buy) (price 4297) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+(Out 30)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Trade ((symbol XLF) (price 4297) (size 1)))
+(Trade ((symbol XLF) (price 4297) (size 1)))
+(Trade ((symbol XLF) (price 4297) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 1) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 27) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 107) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 167)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 1) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 108) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 168)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 2) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 109) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 2) (4201 17) (4200 3))) (sell ((4203 8) (4204 22)))))))
+(Ack 169)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 110) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 170)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 4) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 111) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 171)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 112) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 172) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 173) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 6) (8401 2) (8399 4) (8398 1))) (sell ((8405 7) (8407 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 17) (4200 3))) (sell ((4203 8) (4204 22)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 6) (8401 2) (8399 4) (8398 3))) (sell ((8405 7) (8407 5)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 2) (3996 3) (3995 1)))
+    (sell ((3999 4) (4000 3) (4001 13) (4002 3) (4003 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 17) (4200 3))) (sell ((4203 9) (4204 22)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 5) (5602 7) (5603 2) (5604 3) (5605 1)))))))
+(Trade ((symbol GS) (price 8403) (size 3)))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 4) (8398 3))) (sell ((8405 7) (8407 5)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5601 6) (5602 7) (5603 2) (5604 3) (5605 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 17) (4200 3))) (sell ((4203 12) (4204 22)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4199 1) (4198 2) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 23) (4200 3))) (sell ((4203 12) (4204 22)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3) (3995 1)))
+    (sell ((3999 4) (4000 3) (4001 13) (4002 3) (4003 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 4) (8398 3)))
+    (sell ((8405 7) (8407 5) (8409 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 1) (8398 3)))
+    (sell ((8405 7) (8407 5) (8409 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 24) (4200 3))) (sell ((4203 12) (4204 22)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3) (3995 1)))
+    (sell ((3999 4) (4000 3) (4001 13) (4002 4) (4003 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 27) (4200 3))) (sell ((4203 12) (4204 22)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4199 1) (4198 5) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 2) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3) (3995 1)))
+    (sell ((3999 4) (4000 3) (4001 13) (4002 5) (4003 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3)))
+    (sell ((3999 4) (4000 3) (4001 13) (4002 5) (4003 1)))))))
+(Fill ((order_id 167) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 113) (gs 0) (ms 0) (wfc 0)))))
+(Out 167)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 28) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 112) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 112) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 174)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 8) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 113) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 175) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 176) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 1) (8398 3)))
+    (sell ((8405 6) (8407 5) (8409 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 30) (4200 3))) (sell ((4203 12) (4204 22)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 1) (8398 3)))
+    (sell ((8405 3) (8407 5) (8409 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3)))
+    (sell ((5600 3) (5601 6) (5602 7) (5603 2) (5604 3) (5605 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 30) (4200 3))) (sell ((4203 12) (4204 20)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 30) (4200 3))) (sell ((4203 12) (4204 15)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 1) (8398 3)))
+    (sell ((8405 3) (8407 1) (8409 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3)))
+    (sell ((5600 3) (5601 6) (5602 7) (5603 2) (5604 2) (5605 1)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3))) (sell ((3999 4) (4000 3) (4001 13) (4002 5)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3997 3) (3996 3))) (sell ((3999 4) (4000 3) (4001 13) (4002 6)))))))
+(Trade ((symbol MS) (price 3997) (size 2)))
+(Trade ((symbol MS) (price 3997) (size 1)))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 3))) (sell ((3999 4) (4000 3) (4001 13) (4002 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 2) (8399 1) (8398 3)))
+    (sell ((8405 4) (8407 1) (8409 1)))))))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 4))) (sell ((3999 4) (4000 3) (4001 13) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3)))
+    (sell ((5600 6) (5601 6) (5602 7) (5603 2) (5604 2) (5605 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 3)))
+    (sell ((8405 4) (8407 1) (8409 1)))))))
+(Trade ((symbol BOND) (price 1000) (size 2)))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 9) (997 3))) (sell ((1000 2) (1001 14) (1002 5)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 3)))
+    (sell ((8405 4) (8407 2) (8409 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 2)))
+    (sell ((8405 4) (8407 2) (8409 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2) (5604 2) (5605 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 3))) (sell ((5600 10) (5601 6) (5602 7) (5603 2) (5605 1)))))))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 4))) (sell ((3999 4) (4000 4) (4001 13) (4002 6)))))))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 4)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 1)))
+(Trade ((symbol VALBZ) (price 4203) (size 3)))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 3) (4201 30) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 3))) (sell ((3999 4) (4000 4) (4001 13) (4002 6)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 114) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 3))) (sell ((3999 4) (4000 4) (4001 6) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2) (5605 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 5)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2) (5605 1)))))))
+(Reject ((order_id 177) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 8) (4201 30) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 2) (8409 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 5) (5597 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2) (5605 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 5) (5597 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 1) (8409 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 4) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 1) (8408 2) (8409 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 10) (5601 6) (5602 7) (5603 1)))))))
+(Fill ((order_id 174) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 115) (gs 0) (ms 0) (wfc 0)))))
+(Out 174)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 29) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 114) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 30) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 114) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol MS)
+  (book ((buy ((3996 3))) (sell ((3999 5) (4000 4) (4001 6) (4002 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4199 1) (4198 5) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 1) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Ack 178)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 30) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 115) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 179) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 180) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 3))) (sell ((3998 1) (3999 5) (4000 4) (4001 6) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 10) (5601 6) (5602 9) (5603 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 1) (8408 2) (8409 1)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4198 5) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4225 1) (4227 4) (4229 1) (4230 6) (4231 1) 
+      (4233 3) (4235 3)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 4) (8408 2) (8409 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8403 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 4) (8408 2) (8409 1) (8410 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 8) (4201 30) (4200 3))) (sell ((4204 13)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 11) (5601 6) (5602 9) (5603 1)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 8) (4201 30) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 5) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 4) (8408 2) (8409 1) (8410 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 11) (5601 6) (5602 7) (5603 1)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3)))
+    (sell ((5600 11) (5601 6) (5602 6) (5603 1)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 5) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 2) (8409 1) (8410 4)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 30) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 181) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 5) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 3) (8409 1) (8410 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8401 5) (8399 1) (8398 10)))
+    (sell ((8405 2) (8407 4) (8408 3) (8409 1) (8410 4)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4198 5) (4197 1) (4193 1)))
+    (sell
+     ((4218 6) (4222 3) (4227 4) (4229 1) (4230 6) (4231 1) (4233 3)
+      (4235 3)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3))) (sell ((5600 11) (5601 6) (5602 6)))))))
+(Fill ((order_id 178) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 30) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+(Out 178)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 30) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 31) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 2) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 2) (8407 4) (8408 3) (8409 1) (8410 4)))))))
+(Ack 182)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 31) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 183) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 184) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3))) (sell ((5600 11) (5601 5) (5602 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 2) (8407 4) (8408 3) (8409 1) (8410 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 10) (4201 30) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 1) (8407 4) (8408 3) (8409 1) (8410 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 6) (5597 3) (5596 2)))
+    (sell ((5600 11) (5601 5) (5602 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 3) (3995 1)))
+    (sell ((3998 1) (3999 5) (4000 4) (4001 6) (4002 6)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 10) (4201 25) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 1) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 2) (3995 1)))
+    (sell ((3998 1) (3999 5) (4000 4) (4001 6) (4002 6)))))))
+(Fill ((order_id 182) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 31) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 118) (gs 0) (ms 0) (wfc 0)))))
+(Out 182)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4298 2) (4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7)
+      (4322 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 31) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 11) (5597 3) (5596 2)))
+    (sell ((5600 11) (5601 5) (5602 6)))))))
+(Ack 185)
+(Fill ((order_id 185) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+(Out 185)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4298 1) (4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7)
+      (4322 1)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 186)
+(Fill ((order_id 186) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 33) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+(Out 186)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 33) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 115) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 115) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 187)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 188) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 189) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 14) (4201 25) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 2) (3995 1)))
+    (sell ((3998 1) (3999 5) (4000 4) (4001 4) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 11) (5597 3) (5596 2)))
+    (sell ((5600 12) (5601 5) (5602 6)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 25) (4200 3))) (sell ((4204 15)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 25) (4200 3))) (sell ((4204 14)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 6) (4198 5) (4197 1) (4193 1) (4187 3)))
+    (sell
+     ((4218 6) (4222 3) (4227 4) (4229 1) (4230 6) (4231 1) (4233 3)
+      (4235 3)))))))
+(Trade ((symbol VALE) (price 4201) (size 1)))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4201 5) (4198 5) (4197 1) (4193 1) (4187 3)))
+    (sell
+     ((4218 6) (4222 3) (4227 4) (4229 1) (4230 6) (4231 1) (4233 3)
+      (4235 3)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 11) (5597 3) (5596 2)))
+    (sell ((5600 12) (5601 5) (5602 4)))))))
+(Fill ((order_id 187) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+(Out 187)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 35) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 116) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 3) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Ack 190)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 35) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 117) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 191) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Reject ((order_id 192) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 2) (3995 1)))
+    (sell ((3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 2) (3995 1)))
+    (sell ((3997 2) (3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Fill ((order_id 166) (symbol XLF) (dir Sell) (price 4301) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 35) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 118) (gs 0) (ms 0) (wfc 0)))))
+(Out 166)
+(Trade ((symbol XLF) (price 4301) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 4) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 118) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 2) (3995 1) (3994 2)))
+    (sell ((3997 2) (3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Ack 193)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 5) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 119) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Reject ((order_id 194) (error LIMIT:OPEN_ORDERS)))
+REJECTED xlf sell order
+(Trade ((symbol MS) (price 3996) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3996 1) (3995 1) (3994 2)))
+    (sell ((3997 2) (3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 11) (5597 3) (5596 2)))
+    (sell ((5600 14) (5601 5) (5602 4)))))))
+(Trade ((symbol MS) (price 3996) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 2)))
+    (sell ((3997 2) (3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 5) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 2)))
+    (sell ((3997 4) (3998 1) (3999 5) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4207 3) (4201 5) (4198 5) (4197 1) (4193 1) (4187 3)))
+    (sell
+     ((4218 6) (4222 3) (4227 4) (4229 1) (4230 6) (4231 1) (4233 3)
+      (4235 3)))))))
+(Reject ((order_id 195) (error LIMIT:OPEN_ORDERS)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 2)))
+    (sell ((3997 4) (3998 1) (3999 4) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 6)))
+    (sell ((3997 4) (3998 1) (3999 4) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 22) (4200 3))) (sell ((4204 14)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 4) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 15) (997 3))) (sell ((1000 2) (1001 14) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 22) (4200 3))) (sell ((4204 8)))))))
+(Trade ((symbol BOND) (price 1000) (size 1)))
+(Book
+ ((symbol BOND)
+  (book ((buy ((998 15) (997 3))) (sell ((1000 1) (1001 14) (1002 5)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 6) (8399 1) (8398 10)))
+    (sell ((8405 3) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 4) (4000 4) (4001 3) (4002 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4207 3) (4201 5) (4198 5) (4197 1) (4194 1) (4193 1) (4187 3)))
+    (sell
+     ((4218 6) (4222 3) (4227 4) (4229 1) (4230 6) (4231 1) (4233 3)
+      (4235 3)))))))
+(Reject ((order_id 196) (error LIMIT:OPEN_ORDERS)))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 22) (4200 3))) (sell ((4204 10)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 22) (4200 3))) (sell ((4204 8)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3995 1) (3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 4) (4000 3) (4001 3) (4002 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5599 3) (5598 11) (5597 3) (5596 3)))
+    (sell ((5600 14) (5601 5) (5602 4)))))))
+(Trade ((symbol MS) (price 3995) (size 1)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6)))
+    (sell
+     ((3995 1) (3996 1) (3997 4) (3998 1) (3999 4) (4000 3) (4001 3)
+      (4002 6)))))))
+(Trade ((symbol WFC) (price 5599) (size 3)))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 3) (5596 3))) (sell ((5600 14) (5601 5) (5602 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 3) (5596 3)))
+    (sell ((5599 1) (5600 14) (5601 5) (5602 4)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4207 3) (4201 5) (4198 5) (4197 1) (4194 1) (4193 1) (4187 3)))
+    (sell ((4218 6) (4222 3) (4229 1) (4230 6) (4231 1) (4233 3) (4235 3)))))))
+(Reject ((order_id 197) (error LIMIT:OPEN_ORDERS)))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 4) (4000 3) (4001 3) (4002 6)))))))
+(Book
+ ((symbol VALE)
+  (book
+   ((buy ((4207 3) (4201 5) (4198 5) (4197 1) (4194 1) (4193 1) (4187 3)))
+    (sell ((4218 6) (4229 1) (4230 6) (4231 1) (4233 3) (4235 3)))))))
+(Reject ((order_id 198) (error LIMIT:OPEN_ORDERS)))
+(Fill ((order_id 168) (symbol XLF) (dir Sell) (price 4301) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 34) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 120) (gs 0) (ms 0) (wfc 0)))))
+(Out 168)
+(Trade ((symbol XLF) (price 4301) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 4) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+(Fill ((order_id 169) (symbol XLF) (dir Sell) (price 4301) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 33) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 120) (gs 0) (ms 0) (wfc 0)))))
+(Out 169)
+(Trade ((symbol XLF) (price 4301) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4298 1) (4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 5) (5596 3)))
+    (sell ((5599 1) (5600 14) (5601 5) (5602 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 12) (4201 22) (4200 3))) (sell ((4204 7)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 6) (8399 1) (8398 10)))
+    (sell ((8405 4) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 5) (5596 3)))
+    (sell ((5599 3) (5600 14) (5601 5) (5602 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 13) (4201 22) (4200 3))) (sell ((4204 7)))))))
+(Book
+ ((symbol BOND)
+  (book
+   ((buy ((999 1) (998 15) (997 3))) (sell ((1000 1) (1001 14) (1002 5)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 6) (8399 1) (8398 13)))
+    (sell ((8405 4) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 13) (4201 21) (4200 3))) (sell ((4204 7)))))))
+(Fill ((order_id 190) (symbol XLF) (dir Buy) (price 4298) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 120) (gs 0) (ms 0) (wfc 0)))))
+(Out 190)
+(Trade ((symbol XLF) (price 4298) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8) (4307 10)
+      (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 119) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 14) (4201 21) (4200 3))) (sell ((4204 7)))))))
+(Ack 199)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 1) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7)
+      (4322 1)))))))
+(Book
+ ((symbol BOND)
+  (book
+   ((buy ((999 1) (998 13) (997 3))) (sell ((1000 1) (1001 14) (1002 5)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 14) (4201 20) (4200 3))) (sell ((4204 7)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 16) (4201 20) (4200 3))) (sell ((4204 7)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 6) (8398 13)))
+    (sell ((8405 4) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 16) (4201 19) (4200 3))) (sell ((4204 7)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 5) (5596 3)))
+    (sell ((5599 3) (5600 14) (5601 1) (5602 4)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 5) (8398 13)))
+    (sell ((8405 4) (8407 4) (8408 3) (8409 3) (8410 4)))))))
+(Book
+ ((symbol VALBZ)
+  (book ((buy ((4202 16) (4201 19) (4200 3))) (sell ((4204 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 7) (5596 3)))
+    (sell ((5599 3) (5600 14) (5601 1) (5602 4)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 4) (4000 2) (4001 3) (4002 6)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 16) (4201 19))) (sell ((4204 4)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 16) (4201 19))) (sell ((4204 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 4) (4000 2) (4001 3) (4002 5)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 16) (4201 18))) (sell ((4204 6)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 4) (5596 3)))
+    (sell ((5599 3) (5600 14) (5601 1) (5602 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 4) (5596 3)))
+    (sell ((5599 4) (5600 14) (5601 1) (5602 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 4) (5596 3)))
+    (sell ((5599 4) (5600 11) (5601 1) (5602 4)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 16) (4201 17))) (sell ((4204 6)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 17) (4201 17))) (sell ((4204 6)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 3) (4000 2) (4001 3) (4002 5)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 1) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4313 1) (4316 2) (4317 1) (4321 7)
+      (4322 1)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 17) (4201 17))) (sell ((4204 7)))))))
+(Book
+ ((symbol GS)
+  (book
+   ((buy ((8402 5) (8401 5) (8398 13)))
+    (sell ((8405 4) (8407 4) (8408 3) (8409 2) (8410 4)))))))
+(Book
+ ((symbol WFC)
+  (book
+   ((buy ((5598 11) (5597 4) (5596 3)))
+    (sell ((5599 4) (5600 12) (5601 1) (5602 4)))))))
+(Book
+ ((symbol VALBZ) (book ((buy ((4202 19) (4201 17))) (sell ((4204 7)))))))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 2) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 1) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6) (3993 4)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 3) (4000 2) (4001 3) (4002 5)))))))
+(Fill ((order_id 39) (symbol XLF) (dir Buy) (price 4297) (size 1)))
+(state_manager.nums_of_open_orders
+ ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+  (sells ((bond 0) (valbz -4) (vale 7) (xlf 120) (gs 0) (ms 0) (wfc 0)))))
+(Out 39)
+(Trade ((symbol XLF) (price 4297) (size 1)))
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 1) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 1) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 119) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 200)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 1) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 2) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+((t.nums_of_open_orders
+  ((buys ((bond 0) (valbz 4) (vale -5) (xlf 32) (gs 0) (ms 0) (wfc 0)))
+   (sells ((bond 0) (valbz -4) (vale 7) (xlf 120) (gs 0) (ms 0) (wfc 0)))))
+ ("Size.to_int size" 1))
+(Ack 201)
+(Book
+ ((symbol XLF)
+  (book
+   ((buy ((4297 1) (4296 4) (4295 3) (4294 2) (4293 1) (4292 1)))
+    (sell
+     ((4300 3) (4301 3) (4302 9) (4303 40) (4304 8) (4305 8) (4306 8)
+      (4307 10) (4309 2) (4310 2) (4316 2) (4317 1) (4321 7) (4322 1)
+      (4323 2)))))))
+(Book
+ ((symbol MS)
+  (book
+   ((buy ((3994 6) (3993 7)))
+    (sell ((3996 1) (3997 4) (3998 1) (3999 3) (4000 2) (4001 3) (4002 5)))))))
